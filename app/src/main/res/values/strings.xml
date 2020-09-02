@@ -1,0 +1,414 @@
+<resources>
+
+
+    <string name="app_name">Jamb Quiz</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">nnadihenry92@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">DashBoard</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="rem">rem</string>
+    <string name="no_internet">Internet connection not available</string>
+    <string name="str_video_error">video not loaded.please check network..</string>
+    <string name="coins_error">coins not available</string>
+
+
+    <string name="jamb" translatable="false">JAMB</string>
+    <string name="maths" translatable="false">Maths</string>
+
+
+    <string name="biology">Biology</string>
+    <string name="chemistry">Chemistry</string>
+    <string name="lit">Lit in English</string>
+    <string name="physics">Physics</string>
+    <string name="agric">Agricultural Science</string>
+    <string name="account">Accountancy</string>
+    <string name="geography">Geography</string>
+    <string name="economics">Economics</string>
+    <string name="crk">CRK</string>
+    <string name="irk">IRK</string>
+    <string name="government">Government</string>
+    <string name="commerce">Commerce</string>
+    <string name="history">History</string>
+
+
+
+    <string name="practice_set">Practice Set</string>
+
+    <string name="set">Set</string>
+    <string name="question">Question:</string>
+    <string name="str_question">Question</string>
+    <string name="please_wait">Please wait..</string>
+    <string name="wrong_answer">Wrong Answer</string>
+    <string name="unanswer">UnAnswer</string>
+    <string name="create_pdf">Create PDF</string>
+    <string name="send_to">Send mail…</string>
+
+    <string name="coins">Coins :</string>
+    <string name="view_answer">Review Answer</string>
+    <string name="view_answer_coin">Use 10 coins</string>
+    <string name="show_video">Watch Video ads</string>
+    <string name="questions">Questions :</string>
+    <string name="answer">Answer</string>
+    <string name="your_answer">Your answer</string>
+    <string name="str_of">\u0020of\u0020</string>
+
+    <string name="quiz">quiz</string>
+    <string name="total_set">Total set</string>
+    <string name="total_question">Total question</string>
+    <string name="ex"></string>
+    <string name="score">Score:</string>
+    <string name="retry">Retry</string>
+    <string name="next">Next</string>
+    <string name="home">Home</string>
+    <string name="best_score">Best Score:</string>
+    <string name="no">No.</string>
+    <string name="feedback">Feedback</string>
+    <string name="rate_us">Rate us</string>
+    <string name="send_email">Send Email</string>
+    <string name="share_link">Share Link!</string>
+    <string name="save_pdf">Save Pdf..</string>
+    <string name="language">Language</string>
+    <string name="worksheet_generate">Worksheet Generate</string>
+    <string name="school_name">School Name</string>
+    <string name="school_name_hint">School Name*</string>
+    <string name="number_of_question">Number of Question</string>
+    <string name="number_of_question_hint">Number of Question*</string>
+    <string name="operation_type">Operation Type</string>
+    <string name="submit">Submit</string>
+    <string name="without_answer">Without Answer</string>
+    <string name="with_answer">With Answer</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="operation">Operation</string>
+    <string name="without_carry">Without Carry</string>
+    <string name="with_carry">With Carry</string>
+    <string name="with_borrow">With Borrow</string>
+    <string name="without_borrow">Without borrow</string>
+    <string name="without_remainder">Without remainder</string>
+    <string name="with_remainder">With remainder</string>
+    <string name="str_multiplication_set">Multiplication Set</string>
+    <string name="str_addition_set">Addition Set</string>
+    <string name="str_subtraction_set">Subtraction Set</string>
+    <string name="str_division_set">Division Set</string>
+    <string name="empty_error">Please enter value..</string>
+    <string name="question_paper">Question Paper</string>
+    <string name="studentName">Student Name :</string>
+    <string name="daily_test">Daily Test</string>
+    <string name="take_test">Take test</string>
+    <string name="test_done">Test Done !!</string>
+    <string name="done">Done</string>
+
+    <string name="level_complete">Complete</string>
+    <string name="level">Level</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="repeat">Repeat</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="days">Sun,Mon,Tue,Wed,Thu,Fri,Sat</string>
+    <string name="reminder">Reminder</string>
+    <string name="mathry_reminder">Mathry Reminder</string>
+    <string name="teacher_name">Teacher Name</string>
+    <string name="teacher_name_hint">Teacher Name*</string>
+    <string name="date">Date :</string>
+    <string name="type_of_question">Type of Question</string>
+    <string name="marks">Marks :</string>
+    <string name="page">Page</string>
+    <string name="str_answer">Answer:</string>
+    <string name="watermark_text">WaterMark Text</string>
+    <string name="watermark_text_hint">WaterMark Text*</string>
+    <string name="pdf">Pdf</string>
+    <string name="pdf_generate">Pdf Generated</string>
+    <string name="select_operation_type">Select operation type</string>
+    <string name="please_select_type">Please select type…</string>
+    <string name="fill_details">Please fill details....</string>
+    <string name="select_operation">Select Operation</string>
+    <string name="operation_selected">Operation Selected</string>
+    <string name="operation_selected_hint">Operation Selected*</string>
+    <string name="select_number_types">Select Number Types</string>
+    <string name="number_type_selected">Number Type Selected</string>
+    <string name="select_question_type">Select Question Type</string>
+    <string name="question_type_selected">Question Type Selected</string>
+    <string name="select_question_category">Select Question Category</string>
+    <string name="question_category_selected">Question category selected</string>
+    <string name="no_data">No Data</string>
+    <string name="show_worksheet">Show Worksheet</string>
+    <string name="test_already_done">Test already done !</string>
+    <string name="clear_previous_level">clear previous level..</string>
+    <string name="sound">Sound</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="way_of_learning">Way of Learning</string>
+    <string name="multi_operation">Multi Operations</string>
+    <string name="pdf_error">No application found which can open the file</string>
+    <string name="enter_valid_number">Enter valid number…</string>
+    <string name="no_app_found">No  application found which can open the file</string>
+    <string name="link">Link</string>
+    <string name="select_logo_from_gallery">Select Logo from gallery*</string>
+    <string name="link_hint">Link*</string>
+    <string name="please_select_logo">Please select logo..</string>
+    <string name="auto_fill">Auto fill</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="delete_file">Delete file</string>
+    <string name="select_all">Select all</string>
+    <string name="empty_feedback">Please Enter your Feedback</string>
+    <string name="feedback_hint">Tell us where we can improve?</string>
+    <string name="rate_experience">Rate Your Experience</string>
+    <string name="rate_msg">if you enjoy using app \n would you mind ratting us,then…?</string>
+    <string name="no_thanks">No, Thanks</string>
+    <string name="rating_error">Please select rate</string>
+    <string name="rate_your_experience">Rate Your Experience</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="communicate">Communicate</string>
+
+    <string name="maths_1" translatable="false">2020 Mathematics JAMB quiz</string>
+    <string name="maths_2" translatable="false">2019 Mathematics JAMB quiz</string>
+    <string name="maths_3" translatable="false">2018 Mathematics JAMB quiz</string>
+    <string name="maths_4" translatable="false">2017 Mathematics JAMB quiz</string>
+    <string name="maths_5" translatable="false">2016 Mathematics JAMB quiz</string>
+    <string name="maths_6" translatable="false">2015 Mathematics JAMB quiz</string>
+    <string name="maths_7" translatable="false">2014 Mathematics JAMB quiz</string>
+    <string name="maths_8" translatable="false">2013 Mathematics JAMB quiz</string>
+    <string name="maths_9" translatable="false">2012 Mathematics JAMB quiz</string>
+    <string name="maths_10" translatable="false">2011 Mathematics JAMB quiz</string>
+    <string name="maths_11" translatable="false">2010 Mathematics JAMB quiz</string>
+    <string name="maths_12" translatable="false">2009 Mathematics JAMB quiz</string>
+    <string name="maths_13" translatable="false">2008 Mathematics JAMB quiz</string>
+    <string name="maths_14" translatable="false">2007 Mathematics JAMB quiz</string>
+    <string name="maths_15" translatable="false">2006 Mathematics JAMB quiz</string>
+    <string name="maths_16" translatable="false">2005 Mathematics JAMB quiz</string>
+    <string name="maths_17" translatable="false">2004 Mathematics JAMB quiz</string>
+    <string name="maths_18" translatable="false">2003 Mathematics JAMB quiz</string>
+    <string name="maths_19" translatable="false">2002 Mathematics JAMB quiz</string>
+    <string name="maths_20" translatable="false">2001 Mathematics JAMB quiz</string>
+    <string name="maths_21" translatable="false">2000 Mathematics JAMB quiz</string>
+    <string name="maths_22" translatable="false">Addition 3 digit with 3 digit no carrying</string>
+    <string name="maths_23" translatable="false">Addition 3 digit with 4 digit no carrying</string>
+    <string name="maths_24" translatable="false">Decimal Addition 1 digit 1 decimal with 1 digit 1 decimal  no carrying</string>
+    <string name="addition_25">Decimal Addition 1 digit 2 decimal with 1 digit 2 decimal  no carrying</string>
+    <string name="addition_26">Decimal Addition 1 digit 1 decimal with 1 digit 1 decimal with carrying</string>
+    <string name="addition_27">Decimal Addition 1 digit 2 decimal with 1 digit 2 decimal with carrying</string>
+    <string name="addition_28">Decimal Addition 2 digit 1 decimal with 1 digit 1 decimal  no carrying</string>
+    <string name="addition_29">Decimal Addition 2 digit 1 decimal with 2 digit 1 decimal  no carrying</string>
+    <string name="addition_30">Decimal Addition 2 digit 2 decimal with 2 digit 2 decimal  no carrying</string>
+    <string name="addition_31">Decimal Addition 2 digit 1 decimal with 3 digit 1 decimal  no carrying</string>
+    <string name="addition_32">Decimal Addition 2 digit 2 decimal with 3 digit 2 decimal  no carrying</string>
+    <string name="addition_33">Decimal Addition 2 digit 1 decimal with 1 digit 1 decimal with carrying</string>
+    <string name="addition_34">Decimal Addition 2 digit 1 decimal with 2 digit 1 decimal with carrying</string>
+    <string name="addition_35">Decimal Addition 2 digit 2 decimal with 2 digit 2 decimal with carrying</string>
+    <string name="addition_36">Decimal Addition 2 digit 1 decimal with 3 digit 1 decimal with carrying</string>
+    <string name="addition_37">Decimal Addition 2 digit 2 decimal with 3 digit 2 decimal with carrying</string>
+    <string name="addition_38">Decimal Addition 3 digit 2 decimal with 2 digit 2 decimal  no carrying</string>
+    <string name="addition_39">Decimal Addition 3 digit 1 decimal with 3 digit 1 decimal  no carrying</string>
+    <string name="addition_40">Decimal Addition 3 digit 2 decimal with 3 digit 2 decimal  no carrying</string>
+    <string name="addition_41">Decimal Addition 3 digit 2 decimal with 2 digit 2 decimal with carrying</string>
+    <string name="addition_42">Decimal Addition 3 digit 1 decimal with 3 digit 1 decimal with carrying</string>
+    <string name="addition_43">Decimal Addition 3 digit 2 decimal with 3 digit 2 decimal with carrying</string>
+
+
+    <string name="english_1" translatable="false">2020 English JAMB quiz</string>
+    <string name="english_2" translatable="false">2019 English JAMB quiz</string>
+    <string name="english_3" translatable="false">2018 English JAMB quiz</string>
+    <string name="english_4" translatable="false">2017 English JAMB quiz</string>
+    <string name="english_5" translatable="false">2016 English JAMB quiz</string>
+    <string name="english_6" translatable="false">2015 English JAMB quiz</string>
+    <string name="english_7" translatable="false">2014 English JAMB quiz</string>
+    <string name="english_8" translatable="false">2013 English JAMB quiz</string>
+    <string name="english_9" translatable="false">2012 English JAMB quiz</string>
+    <string name="english_10" translatable="false">2011 English JAMB quiz</string>
+    <string name="english_11" translatable="false">2010 English JAMB quiz</string>
+    <string name="english_12" translatable="false">2009 English JAMB quiz</string>
+    <string name="english_13" translatable="false">2008 English JAMB quiz</string>
+    <string name="english_14" translatable="false">2007 English JAMB quiz</string>
+    <string name="english_15" translatable="false">2006 English JAMB quiz</string>
+    <string name="english_16" translatable="false">2005 English JAMB quiz</string>
+    <string name="english_17" translatable="false">2004 English JAMB quiz</string>
+    <string name="english_18" translatable="false">2003 English JAMB quiz</string>
+    <string name="english_19" translatable="false">2002 English JAMB quiz</string>
+    <string name="english_20" translatable="false">2001 English JAMB quiz</string>
+    <string name="english_21" translatable="false">2000 English JAMB quiz</string>
+    <string name="subtraction_22">Decimal Subtraction 2 digit 2 decimal with 1 digit 2 decimal with borrowing</string>
+    <string name="subtraction_23">Decimal Subtraction 2 digit 1 decimal with 2 digit 1 decimal with borrowing</string>
+    <string name="subtraction_24">Decimal Subtraction 2 digit 2 decimal with 2 digit 2 decimal with borrowing</string>
+    <string name="subtraction_25">Decimal Subtraction 3 digit 1 decimal with 3 digit 1 decimal no borrowing</string>
+    <string name="subtraction_26">Decimal Subtraction 3 digit 2 decimal with 3 digit 2 decimal no borrowing</string>
+    <string name="subtraction_27">Decimal Subtraction 3 digit 2 decimal with 2 digit 2 decimal with borrowing</string>
+    <string name="subtraction_28">Decimal Subtraction 3 digit 1 decimal with 3 digit 1 decimal with borrowing</string>
+    <string name="subtraction_29">Decimal Subtraction 3 digit 2 decimal with 3 digit 2 decimal with borrowing</string>
+
+
+    <string name="chemistry_1" translatable="false">2020 chemistry JAMB quiz</string>
+    <string name="chemistry_2" translatable="false">2019 chemistry JAMB quiz</string>
+    <string name="chemistry_3" translatable="false">2018 chemistry JAMB quiz</string>
+    <string name="chemistry_4" translatable="false">2017 chemistry JAMB quiz</string>
+    <string name="chemistry_5" translatable="false">2016 chemistry JAMB quiz</string>
+    <string name="chemistry_6" translatable="false">2015 chemistry JAMB quiz</string>
+    <string name="chemistry_7" translatable="false">2014 chemistry JAMB quiz</string>
+    <string name="chemistry_8" translatable="false">2013 chemistry JAMB quiz</string>
+    <string name="chemistry_9" translatable="false">2012 chemistry JAMB quiz</string>
+    <string name="chemistry_10" translatable="false">2011 chemistry JAMB quiz</string>
+    <string name="chemistry_11" translatable="false">2010 chemistry JAMB quiz</string>
+    <string name="chemistry_12" translatable="false">2009 chemistry JAMB quiz</string>
+    <string name="multiplication_13">Decimal Multiplication 1 digit 1 decimal with 1 digit 1 decimal</string>
+    <string name="multiplication_14">Decimal Multiplication 1 digit 2 decimal with 1 digit 2 decimal</string>
+    <string name="multiplication_15">Decimal Multiplication 1 digit 1 decimal with 2 digit 1 decimal</string>
+    <string name="multiplication_16">Decimal Multiplication 1 digit 2 decimal with 2 digit 2 decimal</string>
+    <string name="multiplication_17">Decimal Multiplication 2 digit 1 decimal with 1 digit 1 decimal</string>
+    <string name="multiplication_18">Decimal Multiplication 2 digit 2 decimal with 1 digit 2 decimal</string>
+    <string name="multiplication_19">Decimal Multiplication 2 digit 1 decimal with 2 digit 1 decimal</string>
+    <string name="multiplication_20">Decimal Multiplication 2 digit 2 decimal with 2 digit 2 decimal</string>
+    <string name="multiplication_21">Decimal Multiplication 2 digit 1 decimal with 3 digit 1 decimal</string>
+    <string name="multiplication_22">Decimal Multiplication 3 digit 1 decimal with 2 digit 1 decimal</string>
+    <string name="multiplication_23">Decimal Multiplication 3 digit 1 decimal with 3 digit 1 decimal</string>
+
+
+    <string name="bio_1">JAMB 2010 BIOLOGY</string>
+    <string name="bio_2">JAMB 2011 BIOLOGY</string>
+    <string name="bio_3">JAMB 2012 BIOLOGY</string>
+    <string name="bio_4">JAMB 2013 BIOLOGY</string>
+    <string name="bio_5">JAMB 2014 BIOLOGY</string>
+    <string name="bio_6">JAMB 2015 BIOLOGY</string>
+    <string name="bio_7">JAMB 2016 BIOLOGY</string>
+    <string name="bio_8">JAMB 2017 BIOLOGY</string>
+    <string name="bio_9">JAMB 2018 BIOLOGY</string>
+    <string name="bio_10">JAMB 2019 BIOLOGY</string>
+    <string name="bio_11">JAMB 2020 BIOLOGY</string>
+    <string name="bio_12">Division 4 digit with 3 digit no remainders</string>
+    <string name="bio_13">Division 4 digit with 4 digit no remainders</string>
+    <string name="bio_14">Division 4 digit with 2 digit with remainders</string>
+    <string name="bio_15">Division 4 digit with 3 digit with remainders</string>
+    <string name="bio_16">Division 4 digit with 4 digit with remainders</string>
+    <string name="bio_17">Decimal Division 1 digit 1 decimal with 1 digit 1 decimal  no remainders</string>
+    <string name="bio_18">Decimal Division 1 digit 2 decimal with 1 digit 2 decimal  no remainders</string>
+    <string name="bio_19">Decimal Division 1 digit 1 decimal with 1 digit 1 decimal with remainders</string>
+    <string name="bio_20">Decimal Division 1 digit 2 decimal with 1 digit 2 decimal with remainders</string>
+    <string name="bio_21">Decimal Division 2 digit 1 decimal with 2 digit 1 decimal  no remainders</string>
+    <string name="division_22">Decimal Division 2 digit 2 decimal with 2 digit 2 decimal  no remainders</string>
+    <string name="division_23">Decimal Division 2 digit 1 decimal with 2 digit 1 decimal with remainders</string>
+    <string name="division_24">Decimal Division 2 digit 2 decimal with 2 digit 2 decimal with remainders</string>
+    <string name="division_25">Decimal Division 3 digit 1 decimal with 3 digit 1 decimal  no remainders</string>
+    <string name="division_26">Decimal Division 3 digit 2 decimal with 3 digit 2 decimal  no remainders</string>
+    <string name="division_27">Decimal Division 3 digit 1 decimal with 3 digit 1 decimal with remainders</string>
+    <string name="division_28">Decimal Division 3 digit 2 decimal with 3 digit 2 decimal with remainders</string>
+
+
+    <string name="_0" translatable="false">0</string>
+    <string name="slash" translatable="false">/</string>
+    <string name="single_space" translatable="false">\u0020</string>
+    <string name="str_space" translatable="false">\u0020\u0020</string>
+    <string name="equal_sign" translatable="false">\u0020=</string>
+    <string name="sign_question" translatable="false">\u0020?\u0020</string>
+    <string name="percentage_sign" translatable="false">%</string>
+
+
+
+
+    <string name="maths_set" translatable="false">maths_set</string>
+    <string name="economics_data_table" translatable="false">economicsData</string>
+    <string name="maths_data_table" translatable="false">mathsData</string>
+    <string name="english_data_table" translatable="false">englishData</string>
+    <string name="agric_data_table" translatable="false">agricData</string>
+    <string name="biology_data_table" translatable="false">biologyData</string>
+    <string name="english_set" translatable="false">english_set</string>
+    <string name="agric_set" translatable="false">agric_set</string>
+    <string name="biology_set" translatable="false">biology_set</string>
+    <string name="str_addition" translatable="false">Addition</string>
+    <string name="str_subtraction" translatable="false">Subtraction</string>
+    <string name="str_division" translatable="false">Division</string>
+    <string name="str_multiplication" translatable="false">Multiplication</string>
+    <string name="answer_1_format" translatable="false">%.1f</string>
+    <string name="answer_2_format" translatable="false">%.2f</string>
+    <string name="answer_3_format" translatable="false">%.3f</string>
+    <string name="square_format" translatable="false">&lt;sup&gt;2&lt;/sup&gt;</string>
+    <string name="cube_format" translatable="false">&lt;sup&gt;3&lt;/sup&gt;</string>
+    <string name="root_sign" translatable="false">√</string>
+    <string name="str_true" translatable="false">true</string>
+    <string name="str_false" translatable="false">false</string>
+    <string name="str_dot" translatable="false">.</string>
+    <string name="easy" translatable="false">Easy</string>
+    <string name="medium" translatable="false">Medium</string>
+    <string name="hard" translatable="false">Hard</string>
+     <string name="ADS_VISIBILITY" translatable="false">YES</string>
+    <string name="app_id" translatable="false">ca-app-pub-5039012764874679~9632103045</string>
+    <string name="banner_ads" translatable="false">ca-app-pub-5039012764874679/6910678730</string>
+    <string name="admob_interstitial_id" translatable="false">ca-app-pub-5039012764874679/7459624440</string>
+    <string name="video_reward_ads" translatable="false">ca-app-pub-5039012764874679/2917810445</string>
+    <string name="rewarded_ad_id" translatable="false">ca-app-pub-5039012764874679/2917810445</string>
+
+
+    <string name="teacher_name_pdf" translatable="false">Teacher Name :</string>
+    <string name="type_of_question_pdf" translatable="false">Type of Question :</string>
+    <string name="multi_operation_pdf" translatable="false">Multi Operations</string>
+    <string name="total_question_pdf" translatable="false">Total question :</string>
+    <string name="studentName_pdf" translatable="false">Student Name :</string>
+    <string name="date_pdf" translatable="false">Date :</string>
+    <string name="marks_pdf" translatable="false">Marks :</string>
+    <string name="rate_api" translatable="false">market://details?id=</string>
+    <string name="SHARE_APP_LINK" translatable="false">"https://play.google.com/store/apps/details?id=&quot;</string>
+
+    <string name="get_1" translatable="false">\'</string>
+    <string name="es_flag" translatable="false">flag_es.png</string>
+    <string name="en_flag" translatable="false">flag_en.png</string>
+    <string name="space" translatable="false">\u0020</string>
+    <string name="equal" translatable="false">=</string>
+    <string name="answer_dash" translatable="false">____________________________________</string>
+    <string name="answer_dash_blank" translatable="false">___________________________________</string>
+    <string name="pdf_format" translatable="false">.pdf</string>
+    <string name="square_sign" translatable="false">²</string>
+    <string name="cube_sign" translatable="false">³</string>
+    <string name="cube_root_sign" translatable="false">cube_root.png</string>
+    <string name="square_root_sign" translatable="false">squre_root.png</string>
+    <string name="logo" translatable="false">logo.png</string>
+    <string name="date_format" translatable="false">yyyy-MM-dd</string>
+    <string name="default_reminder_text" translatable="false">09:00 PM</string>
+    <string name="str_answer_pdf" translatable="false">Answer :</string>
+
+
+
+    <string name="privacy_policy_link" translatable="false">http://www.google.co.uk/</string>
+
+
+
+    <string name="feedback_mail" translatable="false">nnadihenry92@gmail.com</string>
+
+
+    <!--    Language Name-->
+    
+
+    <string name="english" translatable="false">English</string>
+    <string name="spanish" translatable="false">Spanish</string>
+    <string name="arabic" translatable="false">Arabic</string>
+    <string name="malay" translatable="false">Malay</string>
+    <string name="russian" translatable="false">Russian</string>
+    <string name="french" translatable="false">French</string>
+    <string name="mandarin_chinese" translatable="false">Mandarin Chinese</string>
+    <string name="your_language" translatable="false">Mandarin Chinese</string>
+    <string name="your_language_code" translatable="false">Mandarin Chinese</string>
+
+
+    <!--    Language Code-->
+
+    <string name="en_code" translatable="false">en</string>
+    <string name="fr_code" translatable="false">fr</string>
+    <string name="es_code" translatable="false">es</string>
+    <string name="ar_code" translatable="false">ar</string>
+    <string name="ru_code" translatable="false">ru</string>
+    <string name="ms_code" translatable="false">ms</string>
+    <string name="zh_code" translatable="false">zh</string>
+
+
+
+</resources>
