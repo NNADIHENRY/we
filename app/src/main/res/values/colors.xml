@@ -5,9 +5,6 @@
     <color name="colorAccent">#FF9800</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#363636</color>
-    <color name="orange">#FC8F2E</color>
-    <color name="blue">#1B81D1</color>
-    <color name="green">#64A713</color>
     <color name="red">#F44336</color>
     <color name="pink">#FF6174</color>
     <color name="bgColor">#F2F3F8</color>
@@ -15,8 +12,6 @@
 
     <color name="orangeColorPrimary">#F55135</color>
     <color name="orangeColorPrimaryDark">#F55135</color>
-    <color name="transparent">#00000000</color>
-
 
 
     <color name="blueColorPrimary">#016CAB</color>
@@ -31,15 +26,7 @@
     <color name="cyanColorPrimary">#009688</color>
     <color name="cyanColorPrimaryDark">#009688</color>
 
-    <color name="color_808080">#808080</color>
-
-    <color name="color_white">#ffffff</color>
-    <color name="color_black">#000000</color>
-    <color name="color_green">#097E14</color>
     <color name="color_fb">#3441C6</color>
-    <color name="color_summer">#D15427</color>
-    <color name="color_winter">#005173</color>
-    <color name="color_light_gray">#D3D3D3</color>
 
     <color name="dark_black">#FF000000</color>
     <color name="txt_light_color">#949393</color>

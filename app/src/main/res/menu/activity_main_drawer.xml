@@ -8,7 +8,6 @@
 
 
         <item
-            android:id="@+id/nav_home"
             android:icon="@drawable/ic_homepage"
             android:title="@string/menu_home" />
 
@@ -17,9 +16,13 @@
 
 
         <item
-            android:id="@+id/nav_daily_test"
+            android:id="@+id/nav_discus"
+            android:icon="@drawable/chat"
+            android:title="@string/discussion" />
+        <item
+            android:id="@+id/nav_novels"
             android:icon="@drawable/ic_daily_test"
-            android:title="@string/daily_test" />
+            android:title="@string/jnovels" />
 
 
 
@@ -33,12 +36,17 @@
             android:id="@+id/nav_coin"
             android:icon="@drawable/ic_drawer_coin"
             android:title="@string/coins" />
+        <item
+                            android:id="@+id/nav_join"
+            android:icon="@drawable/community1"
+                            android:title="Join Community" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Log Out" />
 
 
-        <!--        <item-->
-        <!--            android:id="@+id/nav_setting"-->
-        <!--            android:icon="@drawable/ic_settings_black_24dp"-->
-        <!--            android:title="@string/action_settings" />-->
 
 
     </group>
@@ -46,7 +54,6 @@
     <item android:title="@string/communicate">
         <menu>
             <item
-                android:id="@+id/nav_privacy_policy"
                 android:icon="@drawable/policy"
                 android:title="@string/privacy_policy"
                 android:visible="true" />

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.HITech.HILearn.ui.GroupChatActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="@dimen/dp_15"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_8">
+    <include
+        android:id="@+id/group_chat_bar_layout"
+        layout="@layout/app_bar_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    </include>
+    </androidx.cardview.widget.CardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_scroll_view"
+        android:layout_below="@id/card"
+        android:layout_above="@id/myLinearLayout"
+        android:background="#fff">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/group_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/myriadpro_semibold"
+
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/color_fb"
+                android:textSize="@dimen/txt_size"
+                android:background="#ffffff"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="60dp">
+            </TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color_fb"
+        android:id="@+id/myLinearLayout">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_grp_message"
+            android:hint="Type your message"
+            android:padding="17dp"
+            android:layout_weight="5"/>
+        <ImageButton
+            android:id="@+id/send_message_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/send"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

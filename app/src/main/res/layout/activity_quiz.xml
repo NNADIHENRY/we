@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/tools"
     android:background="@color/bgColor"
     android:orientation="vertical">
 
@@ -29,6 +30,16 @@
             android:includeFontPadding="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white" />
+        <ImageView
+            android:id="@+id/imcalc"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:src="@drawable/calc"
+
+            android:textColor="?android:attr/textColorPrimary"
+            />
+
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -374,6 +385,7 @@
                     android:id="@+id/textView1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="10dp"
                     android:fontFamily="@font/myriadpro_semibold"
                     android:gravity="center"
                     android:text="update app to get questions"
@@ -390,6 +402,7 @@
                     android:layout_marginBottom="@dimen/dp_10"
                     android:fontFamily="@font/myriadpro_semibold"
                     android:gravity="center"
+                    android:padding="10dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/txt_size" />
@@ -481,6 +494,17 @@
 
             </LinearLayout>
 
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ads"
+                >
+            </com.google.android.gms.ads.AdView>
 
         </LinearLayout>
     </LinearLayout>

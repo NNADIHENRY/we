@@ -8,13 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
-
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog"></style>
+    <style name="ClickableImageView">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
@@ -32,6 +34,17 @@
 
 
     </style>
+    <style name="HalfScreenWindow" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+
+    </style>
 
 
     <style name="ToolbarStyle" parent="Widget.AppCompat.ActionBar">
@@ -39,11 +52,6 @@
         <item name="navigationIcon">@drawable/ic_keyboard_backspace_black_24dp</item>
         <item name="android:textColorSecondary">@android:color/white</item>
         <item name="android:fontFamily">@font/myriadpro_regular</item>
-    </style>
-
-    <style name="DialogCustomTheme" parent="android:Theme.Holo.Dialog.NoActionBar">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
     </style>
 
     <style name="CalenderViewCustom" parent="Theme.AppCompat.Light">
@@ -59,18 +67,6 @@
         <item name="android:fontFamily">@font/myriadpro_regular</item>
     </style>
 
-    <style name="date_picker_theme" parent="@android:style/Widget.DatePicker">
-        <item name="colorPrimary">@color/colorPrimary</item>
-
-
-
-        <!-- colorPrimaryDark is used for the status bar -->
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-
-        <!-- colorAccent is used as the default value for colorControlActivated
-             which is used to tint widgets -->
-        <item name="colorAccent">@color/cyanColorPrimary</item>
-    </style>
     <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:fontFamily">@font/myriadpro_bold</item>

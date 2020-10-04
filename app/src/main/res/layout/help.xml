@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.help">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/support"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="120dp"-->
+<!--            android:src="@mipmap/ic_launcher"-->
+
+<!--            />-->
+        <LinearLayout
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:foregroundGravity="center"
+            android:orientation="vertical"
+            >
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:text="@string/app_name"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="?android:attr/textColorPrimary"-->
+<!--                android:textSize="@dimen/text_size_xxl"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:foregroundGravity="center"-->
+<!--            android:id="@+id/tvAppTagline"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:text="@string/app_tagline"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            android:textAlignment="center" />-->
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="300dp"
+            android:gravity="center"
+            android:layout_below="@+id/edit">
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/curve">
+                <ImageView
+                    android:id="@+id/call"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_phone_black_24dp"
+                   />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/curve">
+                <ImageView
+                    android:id="@+id/instagram"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/instagram_logo"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/curve">
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/facebook_logo"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/curve">
+                <ImageView
+                    android:id="@+id/whatsapp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/whatsapp"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/curve">
+                <ImageView
+                    android:id="@+id/twitter"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/twitter"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Our Communities and get Help"
+            android:layout_below="@+id/icons"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout >

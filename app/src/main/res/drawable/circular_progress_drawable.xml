@@ -4,7 +4,7 @@
     android:pivotX="50%"
     android:pivotY="50%"
     android:toDegrees="140">
-    <item android:id="@+id/background">
+    <item>
         <shape
             android:angle="0"
             android:innerRadiusRatio="3"

@@ -148,6 +148,22 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_ads_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="visible">
 
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ads"></com.google.android.gms.ads.AdView>
+    </LinearLayout>
 
 </LinearLayout>

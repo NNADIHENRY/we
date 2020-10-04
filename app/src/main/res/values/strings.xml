@@ -1,23 +1,17 @@
 <resources>
 
 
-    <string name="app_name">Jamb Quiz</string>
+    <string name="app_name">Hi-Learn</string>
+    <string name="discussion">Discussion Room</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">nnadihenry92@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
     <string name="menu_home">DashBoard</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
     <string name="rem">rem</string>
-    <string name="no_internet">Internet connection not available</string>
     <string name="str_video_error">video not loaded.please check network..</string>
     <string name="coins_error">coins not available</string>
 
@@ -27,6 +21,7 @@
 
 
     <string name="biology">Biology</string>
+    <string name="civiceducation">Civic Education</string>
     <string name="chemistry">Chemistry</string>
     <string name="lit">Lit in English</string>
     <string name="physics">Physics</string>
@@ -40,32 +35,22 @@
     <string name="commerce">Commerce</string>
     <string name="history">History</string>
 
-
-
-    <string name="practice_set">Practice Set</string>
-
+<string name="jnovels">JAMB novels</string>
     <string name="set">Set</string>
-    <string name="question">Question:</string>
     <string name="str_question">Question</string>
     <string name="please_wait">Please wait..</string>
-    <string name="wrong_answer">Wrong Answer</string>
-    <string name="unanswer">UnAnswer</string>
-    <string name="create_pdf">Create PDF</string>
-    <string name="send_to">Send mail…</string>
 
     <string name="coins">Coins :</string>
     <string name="view_answer">Review Answer</string>
     <string name="view_answer_coin">Use 10 coins</string>
     <string name="show_video">Watch Video ads</string>
-    <string name="questions">Questions :</string>
     <string name="answer">Answer</string>
     <string name="your_answer">Your answer</string>
-    <string name="str_of">\u0020of\u0020</string>
 
     <string name="quiz">quiz</string>
-    <string name="total_set">Total set</string>
-    <string name="total_question">Total question</string>
-    <string name="ex"></string>
+    <string name="total_set">Past Years</string>
+    <string name="total_question">Questions</string>
+    <string name="ex">practice with over 250,000 past questions</string>
     <string name="score">Score:</string>
     <string name="retry">Retry</string>
     <string name="next">Next</string>
@@ -76,33 +61,10 @@
     <string name="rate_us">Rate us</string>
     <string name="send_email">Send Email</string>
     <string name="share_link">Share Link!</string>
-    <string name="save_pdf">Save Pdf..</string>
-    <string name="language">Language</string>
-    <string name="worksheet_generate">Worksheet Generate</string>
-    <string name="school_name">School Name</string>
-    <string name="school_name_hint">School Name*</string>
-    <string name="number_of_question">Number of Question</string>
-    <string name="number_of_question_hint">Number of Question*</string>
-    <string name="operation_type">Operation Type</string>
+
+
     <string name="submit">Submit</string>
-    <string name="without_answer">Without Answer</string>
-    <string name="with_answer">With Answer</string>
     <string name="cancel">Cancel</string>
-    <string name="ok">OK</string>
-    <string name="operation">Operation</string>
-    <string name="without_carry">Without Carry</string>
-    <string name="with_carry">With Carry</string>
-    <string name="with_borrow">With Borrow</string>
-    <string name="without_borrow">Without borrow</string>
-    <string name="without_remainder">Without remainder</string>
-    <string name="with_remainder">With remainder</string>
-    <string name="str_multiplication_set">Multiplication Set</string>
-    <string name="str_addition_set">Addition Set</string>
-    <string name="str_subtraction_set">Subtraction Set</string>
-    <string name="str_division_set">Division Set</string>
-    <string name="empty_error">Please enter value..</string>
-    <string name="question_paper">Question Paper</string>
-    <string name="studentName">Student Name :</string>
     <string name="daily_test">Daily Test</string>
     <string name="take_test">Take test</string>
     <string name="test_done">Test Done !!</string>
@@ -110,40 +72,12 @@
 
     <string name="level_complete">Complete</string>
     <string name="level">Level</string>
-    <string name="sunday">Sunday</string>
-    <string name="monday">Monday</string>
     <string name="repeat">Repeat</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
     <string name="days">Sun,Mon,Tue,Wed,Thu,Fri,Sat</string>
     <string name="reminder">Reminder</string>
     <string name="mathry_reminder">Mathry Reminder</string>
-    <string name="teacher_name">Teacher Name</string>
-    <string name="teacher_name_hint">Teacher Name*</string>
-    <string name="date">Date :</string>
-    <string name="type_of_question">Type of Question</string>
-    <string name="marks">Marks :</string>
     <string name="page">Page</string>
-    <string name="str_answer">Answer:</string>
-    <string name="watermark_text">WaterMark Text</string>
-    <string name="watermark_text_hint">WaterMark Text*</string>
-    <string name="pdf">Pdf</string>
     <string name="pdf_generate">Pdf Generated</string>
-    <string name="select_operation_type">Select operation type</string>
-    <string name="please_select_type">Please select type…</string>
-    <string name="fill_details">Please fill details....</string>
-    <string name="select_operation">Select Operation</string>
-    <string name="operation_selected">Operation Selected</string>
-    <string name="operation_selected_hint">Operation Selected*</string>
-    <string name="select_number_types">Select Number Types</string>
-    <string name="number_type_selected">Number Type Selected</string>
-    <string name="select_question_type">Select Question Type</string>
-    <string name="question_type_selected">Question Type Selected</string>
-    <string name="select_question_category">Select Question Category</string>
-    <string name="question_category_selected">Question category selected</string>
     <string name="no_data">No Data</string>
     <string name="show_worksheet">Show Worksheet</string>
     <string name="test_already_done">Test already done !</string>
@@ -152,21 +86,11 @@
     <string name="on">On</string>
     <string name="off">Off</string>
     <string name="way_of_learning">Way of Learning</string>
-    <string name="multi_operation">Multi Operations</string>
-    <string name="pdf_error">No application found which can open the file</string>
-    <string name="enter_valid_number">Enter valid number…</string>
     <string name="no_app_found">No  application found which can open the file</string>
-    <string name="link">Link</string>
-    <string name="select_logo_from_gallery">Select Logo from gallery*</string>
-    <string name="link_hint">Link*</string>
-    <string name="please_select_logo">Please select logo..</string>
-    <string name="auto_fill">Auto fill</string>
-    <string name="choose_image">Choose Image</string>
     <string name="delete_file">Delete file</string>
     <string name="select_all">Select all</string>
     <string name="empty_feedback">Please Enter your Feedback</string>
     <string name="feedback_hint">Tell us where we can improve?</string>
-    <string name="rate_experience">Rate Your Experience</string>
     <string name="rate_msg">if you enjoy using app \n would you mind ratting us,then…?</string>
     <string name="no_thanks">No, Thanks</string>
     <string name="rating_error">Please select rate</string>
@@ -174,219 +98,135 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="communicate">Communicate</string>
 
-    <string name="maths_1" translatable="false">2020 Mathematics JAMB quiz</string>
-    <string name="maths_2" translatable="false">2019 Mathematics JAMB quiz</string>
-    <string name="maths_3" translatable="false">2018 Mathematics JAMB quiz</string>
-    <string name="maths_4" translatable="false">2017 Mathematics JAMB quiz</string>
-    <string name="maths_5" translatable="false">2016 Mathematics JAMB quiz</string>
-    <string name="maths_6" translatable="false">2015 Mathematics JAMB quiz</string>
-    <string name="maths_7" translatable="false">2014 Mathematics JAMB quiz</string>
-    <string name="maths_8" translatable="false">2013 Mathematics JAMB quiz</string>
-    <string name="maths_9" translatable="false">2012 Mathematics JAMB quiz</string>
-    <string name="maths_10" translatable="false">2011 Mathematics JAMB quiz</string>
-    <string name="maths_11" translatable="false">2010 Mathematics JAMB quiz</string>
-    <string name="maths_12" translatable="false">2009 Mathematics JAMB quiz</string>
-    <string name="maths_13" translatable="false">2008 Mathematics JAMB quiz</string>
-    <string name="maths_14" translatable="false">2007 Mathematics JAMB quiz</string>
-    <string name="maths_15" translatable="false">2006 Mathematics JAMB quiz</string>
-    <string name="maths_16" translatable="false">2005 Mathematics JAMB quiz</string>
-    <string name="maths_17" translatable="false">2004 Mathematics JAMB quiz</string>
-    <string name="maths_18" translatable="false">2003 Mathematics JAMB quiz</string>
-    <string name="maths_19" translatable="false">2002 Mathematics JAMB quiz</string>
-    <string name="maths_20" translatable="false">2001 Mathematics JAMB quiz</string>
-    <string name="maths_21" translatable="false">2000 Mathematics JAMB quiz</string>
-    <string name="maths_22" translatable="false">Addition 3 digit with 3 digit no carrying</string>
-    <string name="maths_23" translatable="false">Addition 3 digit with 4 digit no carrying</string>
-    <string name="maths_24" translatable="false">Decimal Addition 1 digit 1 decimal with 1 digit 1 decimal  no carrying</string>
-    <string name="addition_25">Decimal Addition 1 digit 2 decimal with 1 digit 2 decimal  no carrying</string>
-    <string name="addition_26">Decimal Addition 1 digit 1 decimal with 1 digit 1 decimal with carrying</string>
-    <string name="addition_27">Decimal Addition 1 digit 2 decimal with 1 digit 2 decimal with carrying</string>
-    <string name="addition_28">Decimal Addition 2 digit 1 decimal with 1 digit 1 decimal  no carrying</string>
-    <string name="addition_29">Decimal Addition 2 digit 1 decimal with 2 digit 1 decimal  no carrying</string>
-    <string name="addition_30">Decimal Addition 2 digit 2 decimal with 2 digit 2 decimal  no carrying</string>
-    <string name="addition_31">Decimal Addition 2 digit 1 decimal with 3 digit 1 decimal  no carrying</string>
-    <string name="addition_32">Decimal Addition 2 digit 2 decimal with 3 digit 2 decimal  no carrying</string>
-    <string name="addition_33">Decimal Addition 2 digit 1 decimal with 1 digit 1 decimal with carrying</string>
-    <string name="addition_34">Decimal Addition 2 digit 1 decimal with 2 digit 1 decimal with carrying</string>
-    <string name="addition_35">Decimal Addition 2 digit 2 decimal with 2 digit 2 decimal with carrying</string>
-    <string name="addition_36">Decimal Addition 2 digit 1 decimal with 3 digit 1 decimal with carrying</string>
-    <string name="addition_37">Decimal Addition 2 digit 2 decimal with 3 digit 2 decimal with carrying</string>
-    <string name="addition_38">Decimal Addition 3 digit 2 decimal with 2 digit 2 decimal  no carrying</string>
-    <string name="addition_39">Decimal Addition 3 digit 1 decimal with 3 digit 1 decimal  no carrying</string>
-    <string name="addition_40">Decimal Addition 3 digit 2 decimal with 3 digit 2 decimal  no carrying</string>
-    <string name="addition_41">Decimal Addition 3 digit 2 decimal with 2 digit 2 decimal with carrying</string>
-    <string name="addition_42">Decimal Addition 3 digit 1 decimal with 3 digit 1 decimal with carrying</string>
-    <string name="addition_43">Decimal Addition 3 digit 2 decimal with 3 digit 2 decimal with carrying</string>
+
+    <string name="agric_1" translatable="false">Start Agricultural Science JAMB practice</string>
+
+    <string name="phy_1" translatable="false">Start Physics JAMB practice</string>
+
+    <string name="crk_1" translatable="false">Start CRK JAMB practice</string>
+
+    <string name="irk_1" translatable="false">Start IRK JAMB practice</string>
 
 
-    <string name="english_1" translatable="false">2020 English JAMB quiz</string>
-    <string name="english_2" translatable="false">2019 English JAMB quiz</string>
-    <string name="english_3" translatable="false">2018 English JAMB quiz</string>
-    <string name="english_4" translatable="false">2017 English JAMB quiz</string>
-    <string name="english_5" translatable="false">2016 English JAMB quiz</string>
-    <string name="english_6" translatable="false">2015 English JAMB quiz</string>
-    <string name="english_7" translatable="false">2014 English JAMB quiz</string>
-    <string name="english_8" translatable="false">2013 English JAMB quiz</string>
-    <string name="english_9" translatable="false">2012 English JAMB quiz</string>
-    <string name="english_10" translatable="false">2011 English JAMB quiz</string>
-    <string name="english_11" translatable="false">2010 English JAMB quiz</string>
-    <string name="english_12" translatable="false">2009 English JAMB quiz</string>
-    <string name="english_13" translatable="false">2008 English JAMB quiz</string>
-    <string name="english_14" translatable="false">2007 English JAMB quiz</string>
-    <string name="english_15" translatable="false">2006 English JAMB quiz</string>
-    <string name="english_16" translatable="false">2005 English JAMB quiz</string>
-    <string name="english_17" translatable="false">2004 English JAMB quiz</string>
-    <string name="english_18" translatable="false">2003 English JAMB quiz</string>
-    <string name="english_19" translatable="false">2002 English JAMB quiz</string>
-    <string name="english_20" translatable="false">2001 English JAMB quiz</string>
-    <string name="english_21" translatable="false">2000 English JAMB quiz</string>
-    <string name="subtraction_22">Decimal Subtraction 2 digit 2 decimal with 1 digit 2 decimal with borrowing</string>
-    <string name="subtraction_23">Decimal Subtraction 2 digit 1 decimal with 2 digit 1 decimal with borrowing</string>
-    <string name="subtraction_24">Decimal Subtraction 2 digit 2 decimal with 2 digit 2 decimal with borrowing</string>
-    <string name="subtraction_25">Decimal Subtraction 3 digit 1 decimal with 3 digit 1 decimal no borrowing</string>
-    <string name="subtraction_26">Decimal Subtraction 3 digit 2 decimal with 3 digit 2 decimal no borrowing</string>
-    <string name="subtraction_27">Decimal Subtraction 3 digit 2 decimal with 2 digit 2 decimal with borrowing</string>
-    <string name="subtraction_28">Decimal Subtraction 3 digit 1 decimal with 3 digit 1 decimal with borrowing</string>
-    <string name="subtraction_29">Decimal Subtraction 3 digit 2 decimal with 3 digit 2 decimal with borrowing</string>
+    <string name="gov_1" translatable="false">Start Government JAMB practice</string>
 
 
-    <string name="chemistry_1" translatable="false">2020 chemistry JAMB quiz</string>
-    <string name="chemistry_2" translatable="false">2019 chemistry JAMB quiz</string>
-    <string name="chemistry_3" translatable="false">2018 chemistry JAMB quiz</string>
-    <string name="chemistry_4" translatable="false">2017 chemistry JAMB quiz</string>
-    <string name="chemistry_5" translatable="false">2016 chemistry JAMB quiz</string>
-    <string name="chemistry_6" translatable="false">2015 chemistry JAMB quiz</string>
-    <string name="chemistry_7" translatable="false">2014 chemistry JAMB quiz</string>
-    <string name="chemistry_8" translatable="false">2013 chemistry JAMB quiz</string>
-    <string name="chemistry_9" translatable="false">2012 chemistry JAMB quiz</string>
-    <string name="chemistry_10" translatable="false">2011 chemistry JAMB quiz</string>
-    <string name="chemistry_11" translatable="false">2010 chemistry JAMB quiz</string>
-    <string name="chemistry_12" translatable="false">2009 chemistry JAMB quiz</string>
-    <string name="multiplication_13">Decimal Multiplication 1 digit 1 decimal with 1 digit 1 decimal</string>
-    <string name="multiplication_14">Decimal Multiplication 1 digit 2 decimal with 1 digit 2 decimal</string>
-    <string name="multiplication_15">Decimal Multiplication 1 digit 1 decimal with 2 digit 1 decimal</string>
-    <string name="multiplication_16">Decimal Multiplication 1 digit 2 decimal with 2 digit 2 decimal</string>
-    <string name="multiplication_17">Decimal Multiplication 2 digit 1 decimal with 1 digit 1 decimal</string>
-    <string name="multiplication_18">Decimal Multiplication 2 digit 2 decimal with 1 digit 2 decimal</string>
-    <string name="multiplication_19">Decimal Multiplication 2 digit 1 decimal with 2 digit 1 decimal</string>
-    <string name="multiplication_20">Decimal Multiplication 2 digit 2 decimal with 2 digit 2 decimal</string>
-    <string name="multiplication_21">Decimal Multiplication 2 digit 1 decimal with 3 digit 1 decimal</string>
-    <string name="multiplication_22">Decimal Multiplication 3 digit 1 decimal with 2 digit 1 decimal</string>
-    <string name="multiplication_23">Decimal Multiplication 3 digit 1 decimal with 3 digit 1 decimal</string>
+    <string name="geo_1" translatable="false">Start Geography JAMB practice</string>
+
+    <string name="his_1" translatable="false">Start History JAMB Practice</string>
+
+    <string name="civic_1" translatable="false">Start Civic Education JAMB practice</string>
+
+    <string name="acc_1" translatable="false">Start Accounting JAMB practice</string>
+
+    <string name="com_1" translatable="false">Start Commerce JAMB practice</string>
+
+    <string name="eco_1" translatable="false">Start Economics JAMB practice</string>
+
+    <string name="lit_1" translatable="false">Start Literature JAMB practice</string>
 
 
-    <string name="bio_1">JAMB 2010 BIOLOGY</string>
-    <string name="bio_2">JAMB 2011 BIOLOGY</string>
-    <string name="bio_3">JAMB 2012 BIOLOGY</string>
-    <string name="bio_4">JAMB 2013 BIOLOGY</string>
-    <string name="bio_5">JAMB 2014 BIOLOGY</string>
-    <string name="bio_6">JAMB 2015 BIOLOGY</string>
-    <string name="bio_7">JAMB 2016 BIOLOGY</string>
-    <string name="bio_8">JAMB 2017 BIOLOGY</string>
-    <string name="bio_9">JAMB 2018 BIOLOGY</string>
-    <string name="bio_10">JAMB 2019 BIOLOGY</string>
-    <string name="bio_11">JAMB 2020 BIOLOGY</string>
-    <string name="bio_12">Division 4 digit with 3 digit no remainders</string>
-    <string name="bio_13">Division 4 digit with 4 digit no remainders</string>
-    <string name="bio_14">Division 4 digit with 2 digit with remainders</string>
-    <string name="bio_15">Division 4 digit with 3 digit with remainders</string>
-    <string name="bio_16">Division 4 digit with 4 digit with remainders</string>
-    <string name="bio_17">Decimal Division 1 digit 1 decimal with 1 digit 1 decimal  no remainders</string>
-    <string name="bio_18">Decimal Division 1 digit 2 decimal with 1 digit 2 decimal  no remainders</string>
-    <string name="bio_19">Decimal Division 1 digit 1 decimal with 1 digit 1 decimal with remainders</string>
-    <string name="bio_20">Decimal Division 1 digit 2 decimal with 1 digit 2 decimal with remainders</string>
-    <string name="bio_21">Decimal Division 2 digit 1 decimal with 2 digit 1 decimal  no remainders</string>
-    <string name="division_22">Decimal Division 2 digit 2 decimal with 2 digit 2 decimal  no remainders</string>
-    <string name="division_23">Decimal Division 2 digit 1 decimal with 2 digit 1 decimal with remainders</string>
-    <string name="division_24">Decimal Division 2 digit 2 decimal with 2 digit 2 decimal with remainders</string>
-    <string name="division_25">Decimal Division 3 digit 1 decimal with 3 digit 1 decimal  no remainders</string>
-    <string name="division_26">Decimal Division 3 digit 2 decimal with 3 digit 2 decimal  no remainders</string>
-    <string name="division_27">Decimal Division 3 digit 1 decimal with 3 digit 1 decimal with remainders</string>
-    <string name="division_28">Decimal Division 3 digit 2 decimal with 3 digit 2 decimal with remainders</string>
+    <string name="maths_1" translatable="false">Start Mathematics JAMB Practice</string>
+
+
+    <string name="english_1" translatable="false">Start English JAMB practice</string>
+
+
+    <string name="chemistry_1" translatable="false">Start chemistry JAMB practice</string>
+
+
+    <string name="bio_1" translatable="false">Start Biology JAMB practice</string>
 
 
     <string name="_0" translatable="false">0</string>
     <string name="slash" translatable="false">/</string>
     <string name="single_space" translatable="false">\u0020</string>
     <string name="str_space" translatable="false">\u0020\u0020</string>
-    <string name="equal_sign" translatable="false">\u0020=</string>
-    <string name="sign_question" translatable="false">\u0020?\u0020</string>
-    <string name="percentage_sign" translatable="false">%</string>
 
 
-
-
-    <string name="maths_set" translatable="false">maths_set</string>
+    <string name="economics_set" translatable="false">economics_set</string>
     <string name="economics_data_table" translatable="false">economicsData</string>
+    <string name="maths_set" translatable="false">maths_set</string>
     <string name="maths_data_table" translatable="false">mathsData</string>
     <string name="english_data_table" translatable="false">englishData</string>
-    <string name="agric_data_table" translatable="false">agricData</string>
-    <string name="biology_data_table" translatable="false">biologyData</string>
     <string name="english_set" translatable="false">english_set</string>
+    <string name="agric_data_table" translatable="false">agricData</string>
     <string name="agric_set" translatable="false">agric_set</string>
+    <string name="biology_data_table" translatable="false">biologyData</string>
     <string name="biology_set" translatable="false">biology_set</string>
-    <string name="str_addition" translatable="false">Addition</string>
-    <string name="str_subtraction" translatable="false">Subtraction</string>
-    <string name="str_division" translatable="false">Division</string>
-    <string name="str_multiplication" translatable="false">Multiplication</string>
-    <string name="answer_1_format" translatable="false">%.1f</string>
+    <string name="chemistry_set" translatable="false">chemistry_set</string>
+    <string name="chemistry_data_table" translatable="false">chemistryData</string>
+    <string name="physics_set" translatable="false">physics_set</string>
+    <string name="physics_data_table" translatable="false">physicsData</string>
+    <string name="crk_set" translatable="false">crk_set</string>
+    <string name="crk_data_table" translatable="false">crkData</string>
+    <string name="irk_set" translatable="false">irk_set</string>
+    <string name="irk_data_table" translatable="false">irkData</string>
+    <string name="geography_set" translatable="false">geography_set</string>
+    <string name="geography_data_table" translatable="false">geographyData</string>
+    <string name="government_set" translatable="false">government_set</string>
+    <string name="government_data_table" translatable="false">governmentData</string>
+    <string name="history_set" translatable="false">history_set</string>
+    <string name="history_data_table" translatable="false">historyData</string>
+    <string name="civic_set" translatable="false">civic_set</string>
+    <string name="civic_data_table" translatable="false">civicData</string>
+    <string name="account_set" translatable="false">account_set</string>
+    <string name="account_data_table" translatable="false">accountData</string>
+    <string name="commerce_set" translatable="false">commerce_set</string>
+    <string name="commerce_data_table" translatable="false">commerceData</string>
+    <string name="literature_set" translatable="false">literature_set</string>
+    <string name="literature_data_table" translatable="false">literatureData</string>
+
+
+    <string name="str_maths" translatable="false">Mathematics</string>
+    <string name="str_english" translatable="false">English Language</string>
+    <string name="str_biology" translatable="false">Biology</string>
+    <string name="str_agric" translatable="false">Agricultural Science</string>
+    <string name="str_chemistry" translatable="false">Chemistry</string>
+    <string name="str_physics" translatable="false">Physics</string>
+    <string name="str_crk" translatable="false">CRK</string>
+    <string name="str_irk" translatable="false">IRK</string>
+    <string name="str_government" translatable="false">Government</string>
+    <string name="str_geography" translatable="false">Geography</string>
+    <string name="str_civic" translatable="false">Civic Education</string>
+    <string name="str_history" translatable="false">History</string>
+    <string name="str_account" translatable="false">Account</string>
+    <string name="str_commerce" translatable="false">Commerce</string>
+    <string name="str_economics" translatable="false">Economics</string>
+    <string name="str_literature" translatable="false">Literature in English</string>
+
+
+    <string name="authentication_sign_in_google">Sign in with Google</string>
+    <string name="app_tagline">More than just a CBT </string>
+
     <string name="answer_2_format" translatable="false">%.2f</string>
-    <string name="answer_3_format" translatable="false">%.3f</string>
     <string name="square_format" translatable="false">&lt;sup&gt;2&lt;/sup&gt;</string>
     <string name="cube_format" translatable="false">&lt;sup&gt;3&lt;/sup&gt;</string>
-    <string name="root_sign" translatable="false">√</string>
     <string name="str_true" translatable="false">true</string>
-    <string name="str_false" translatable="false">false</string>
     <string name="str_dot" translatable="false">.</string>
     <string name="easy" translatable="false">Easy</string>
     <string name="medium" translatable="false">Medium</string>
     <string name="hard" translatable="false">Hard</string>
-     <string name="ADS_VISIBILITY" translatable="false">YES</string>
+    <string name="ADS_VISIBILITY" translatable="false">YES</string>
     <string name="app_id" translatable="false">ca-app-pub-5039012764874679~9632103045</string>
     <string name="banner_ads" translatable="false">ca-app-pub-5039012764874679/6910678730</string>
     <string name="admob_interstitial_id" translatable="false">ca-app-pub-5039012764874679/7459624440</string>
     <string name="video_reward_ads" translatable="false">ca-app-pub-5039012764874679/2917810445</string>
-    <string name="rewarded_ad_id" translatable="false">ca-app-pub-5039012764874679/2917810445</string>
 
 
-    <string name="teacher_name_pdf" translatable="false">Teacher Name :</string>
-    <string name="type_of_question_pdf" translatable="false">Type of Question :</string>
-    <string name="multi_operation_pdf" translatable="false">Multi Operations</string>
-    <string name="total_question_pdf" translatable="false">Total question :</string>
-    <string name="studentName_pdf" translatable="false">Student Name :</string>
-    <string name="date_pdf" translatable="false">Date :</string>
-    <string name="marks_pdf" translatable="false">Marks :</string>
     <string name="rate_api" translatable="false">market://details?id=</string>
     <string name="SHARE_APP_LINK" translatable="false">"https://play.google.com/store/apps/details?id=&quot;</string>
 
-    <string name="get_1" translatable="false">\'</string>
-    <string name="es_flag" translatable="false">flag_es.png</string>
-    <string name="en_flag" translatable="false">flag_en.png</string>
     <string name="space" translatable="false">\u0020</string>
-    <string name="equal" translatable="false">=</string>
-    <string name="answer_dash" translatable="false">____________________________________</string>
-    <string name="answer_dash_blank" translatable="false">___________________________________</string>
-    <string name="pdf_format" translatable="false">.pdf</string>
-    <string name="square_sign" translatable="false">²</string>
-    <string name="cube_sign" translatable="false">³</string>
-    <string name="cube_root_sign" translatable="false">cube_root.png</string>
-    <string name="square_root_sign" translatable="false">squre_root.png</string>
-    <string name="logo" translatable="false">logo.png</string>
     <string name="date_format" translatable="false">yyyy-MM-dd</string>
     <string name="default_reminder_text" translatable="false">09:00 PM</string>
-    <string name="str_answer_pdf" translatable="false">Answer :</string>
-
-
-
-    <string name="privacy_policy_link" translatable="false">http://www.google.co.uk/</string>
-
 
 
     <string name="feedback_mail" translatable="false">nnadihenry92@gmail.com</string>
 
 
     <!--    Language Name-->
-    
+
 
     <string name="english" translatable="false">English</string>
     <string name="spanish" translatable="false">Spanish</string>
@@ -395,8 +235,6 @@
     <string name="russian" translatable="false">Russian</string>
     <string name="french" translatable="false">French</string>
     <string name="mandarin_chinese" translatable="false">Mandarin Chinese</string>
-    <string name="your_language" translatable="false">Mandarin Chinese</string>
-    <string name="your_language_code" translatable="false">Mandarin Chinese</string>
 
 
     <!--    Language Code-->
@@ -410,5 +248,276 @@
     <string name="zh_code" translatable="false">zh</string>
 
 
+    <string name="sweeth1">Sweet Sixteen (16) Author Biography [Bolaji Abdullahi]</string>
+    <string name="sweeth2">Sweet Sixteen (16) Characterization Summary</string>
+    <string name="sweeth3">Sweet Sixteen (16) Chapter One - \"THE LETTER\" Comprehensive and
+Concise Summary</string>
+    <string name="sweeth4">Sweet Sixteen (16) Chapter Two - \"THE DRIVE\" Comprehensive and
+Concise Summary</string>
+    <string name="sweeth5">Sweet Sixteen (16) Chapter Three - \"WORK\" Comprehensive and
+Concise Summary</string>
+    <string name="sweeth6">Sweet Sixteen (16) Chapter Four - \"THE GANDHI TEST\" Comprehensive
+and Concise Summary</string>
+    <string name="sweeth7">Sweet Sixteen (16) Chapter Five - \"DATING\" Comprehensive and
+Concise Summary</string>
+    <string name="sweeth8">Sweet Sixteen (16) Chapter Six - \"STEREOTYPE\" Comprehensive and
+Concise Summary</string>
+    <string name="sweeth9">Sweet Sixteen (16) Chapter Seven - \"BEAUTY\" Comprehensive and
+Concise Summary</string>
+
+
+    <string name="sweetb1">Bolaji Abdullahi is a Nigerian journalist, politician and writer born in 1969. He obtained a B.Sc.
+in Mass Communication from the University of Lagos and graduated with a Second Class
+Upper Degree. In 2001.
+He won the British Council Chevening Scholarship to further his studies in the Institute of
+Development Studies (IDS), University of Sussex. There, he obtained his Masters Degree and
+graduated with a distinction in 2002.
+In 1997, Abdullahi joined ThisDay Newspapers as a reporter. In 1998, he joined Africa
+Leadership Forum, a civil society organization in Ota, Ogun State as a Publications Officer
+and later a Programme officer. In 2000, Abdullahi returned to ThisDay Newspaper and he
+became the Deputy Editor in 2001. In his first year as a journalist in ThisDay Newspaper, he
+won a nomination for the Nigerian Media Merit Award for the Best Newspaper feature of
+the Year and he also did great exploits in his weekly column, Gains of Wit.
+Bolaji Abdullahi was appointed the special Assistant, communications and strategy, to the
+Executive Governor of Kwara state in 2003 and was also the Special Adviser, Policy and
+strategy to the Executive Governor of the same state in 2005.
+In 2007, he became the Honourable Commissioner of Kwara state Ministry of Education,
+Science and Technology. He was also the Minister of Youth Development in 2011 and later
+the Minister of Sports under the Goodluck Jonathan Presidency.
+On 1st December, 2016 he became the National Publicity Secretary of the All Progressive
+Congress (APC) but he resigned this post and defected from the party on 1st August 2018.
+Sweet Sixteen is his first novel.</string>
+    <string name="sweetb2">"1. ALIYA : Aliya Bello is the only child of her parents. She is a smart girl who has A grades in
+almost all her school subjects. She is also a model student who will soon be appointed that head
+girl of her school.
+Being a young adult, she has a lot of questions about life and is quick to ask her best friend
+answers to these questions. Her best friend is her dad as they are always together when she
+returns home from the boarding school.
+She is an attentive girl who is reserved and observant. In some situations, she allows herself to be
+trampled upon due to her low self-esteem that builds up over the years due to her body size. Insome other cases, she is quick to react to negatively as she does when one of her classmates
+condemns her and other Muslims to hell because they are not Christians and they are murderers .
+Aliya is not very social but she already thinks of rendering her services to the human race in the
+nearest future. This reflects in her choice of wanting to initially study medicine in order to help
+children who have asthma like her. Also, she wants to donate inhalers to the school clinic for
+asthmatic students who don\'t have inhalers.
+2. MR. BELLO: Mr. Bello is Aliya\'s father. He is a learned man who values education and
+reading books. He is morally upright and he is a good father who performs his duties excellently
+well to his daughter. He is attentive, patient and consistent.
+He gives his daughter the best thing a child can ever ask for - love, care, attention and a father-
+daughter relationship.
+3. MRS. BELLO: Mrs. Bello is Aliya\'s mother. She is a nurse and a good mother too. She
+supports her husband's decisions and opinions though she may not agree with them. She is quick
+to anger and doesn't hide it when she is.
+4. BOBO: Bobo is Tokunbo Alabi\'s nickname. He is the first guy to declare likeness for Aliya.
+However, his love can be regarded as an infatuation as it soon fades away. Aliya sees him with
+other girls he has probably proclaimed same love for and he eventually leaves for Ireland without
+saying a word to her about it."</string>
+    <string name="sweetb3">"Aliya is a young girl of 16 years old who before reaching this age has always wanted to be an
+adult and referred to as one. She is an only child who has a father who is a nurse. She has a close
+relationship with her father, compared to her mother and she tells him everything. This helps her
+father to guide her smoothly in the affairs of her life. One of the things she tells him is her first
+encounter with a boy who claims he likes her.
+The boy, Bobo, declares his likeness for her and also gives her a gift to show this feelings. Being
+the first time she is at the receiving end of such gestures she doesn\'t know what to feel and her
+dad is quick to put her through.
+The readers can identify with Aliya in this instance as everyone has a first when it comes to
+relationship with the opposite sex. Aliya\'s father\'s advice to her is also applicable to young
+adults.
+He advises that a recipient of a gift should not feel obliged to do anything because they feel
+indebted.
+Also, gifts don't mean the giver really loves the other person and relationships shouldn\'t be based
+on material benefits.On Aliya\'s birthdays since she is 12, she receives birthday cards from her father and on the
+occasion of her 16th birthday, he gives her a birthday card, a digital camera and a 16-page
+letter detailing her life journey, each page for each year."</string>
+    <string name="sweetb4">"This chapter is a flashback as contained in the 16-page letter. Aliya is 12 years old and just
+returned home from the boarding house when she goes on a drive with her father.
+During the drive, Aliya sees some girls hawking and she envies their freedom. She fees they are
+free to go around, meet people and have fun but her father cautions her, explaining that things
+don\'t always seem like how they look. Though Aliya is born into a comfortable home, she isn\'t
+allowed the freedom of going wherever she likes.
+This situation explains the irony of life as no one has it all. Though, Aliya is born with a silver
+spoon, she is not afforded the luxury of going wherever she wants or meet other people
+randomly. She lives in a high fenced house and also goes to a boarding school.
+On the other hand, the girls hawking on the streets may seem free and may be having fun, in Mr.
+Bello\'s words \'they would not mind trading places\' with Aliya in air-conditioned car. Then,
+another disparity that exists between rich and poor children is the fact that rich children are
+naturally expected to do better in life because they have all the comfort in the world.
+However, the zeal, willingness, determination and desire to become great which propels some
+poor children is usually enough to make them eventually great.
+During this drive, Mr. Bello seizes the opportunity of the informal atmosphere to give his
+daughter sex education. A few days earlier, Aliya has seen her menstrual period for the first time
+and her father deems it fit she needs to learn about this important aspect of a woman\'s life.He teaches that menstruation is the body's way of telling a girl that she is biological ready to be a
+mother, which means if she has unprotected sexual intercourse with a guy she could become
+pregnant.
+It is obvious that this is the first time Mr. Bello is having a discussion about sex with his
+daughter but surprisingly she already knows so much about the subject. This is an indication that
+in the present age and century we live in, sex is no longer a hidden issue that is only discussed in
+hush tones, but it is everywhere. Aliya already learns about sex from the TV, friends, magazines,
+books and movies.
+Aliya already has the basic knowledge of what sex is all about so her father gives her guides
+concerning sex and other things he refers to as fifth, which can corrupt the beautiful room which
+is her mind.
+He advises her not to watch movies scenes that depict sex and also be watchful about the
+company she keeps"</string>
+    <string name="sweetb5">"Aliya loves her father and will do anything to please him. She attempts severally to make his tea
+but she doesn\'t get it right until her mother puts her through. In this chapter she learns to make
+his tea perfectly and while he has his tea on a Saturday morning, she has a discussion with him
+concerning future ambition and other things.
+Aliya informs her father she doesn\'t want to be a doctor anymore but a lawyer. In previous years,
+Aliya has wanted to be a pilot, then a musician, a songwriter and afterwards a fashion designer.
+Now she wants to be a lawyer. This depicts the indecision that comes with choosing a career at a
+young age. As a child grows, he must have has a lot of ambitions that probably changes every
+year but according to Mr. Bello, it doesn\'t matter what the choice of career is, what matters is
+having love and passion for what one does and only then can one be successful.
+This leads to the discussion about parents choosing their children\'s career. This is not always a
+good idea as such child is only pursuing his parents' dream and not his dream. This in the end
+will only spell doom for both parties and lead to a waste of everyone\'s time if the child decides to
+follow his dreams afterwards. Mr. Bello is of the opinion that children are educated in order to be
+able to think for themselves and parents must learn to listen to them.Afterwards Mr. Bello laments about the negative effects of technology on the young generation.
+Technology has most effects on reading habits as most young people prefer visiting the social
+media and surfing the internet than reading books. This has reduced their thinking capability,
+spelling and language skills"</string>
+    <string name="sweetb6">"The Gandhi Test is gotten from the words of Mahatma Gandhi, an Indian who fights for the
+independence of his country from Great Britain.
+The test is that "you can tell that what you are doing is good or bad if you want other people to
+know about it or not". This statement explains how a person can make morally right decisions.
+If a person is doing something and he wouldn\'t mind if other people know about it then what the
+person is doing is right but if such person doesn\'t want other people to know about what he is
+doing, then such action is most likely wrong.
+However, this doesn't apply to some people who Mr. Bello refers to as animals. This kind of
+people do not have a sense of shame as they do anything, whether right or wrong, without
+minding what others would think about them.
+Mr. Bello further explains to his daughter that before she makes decisions she should always be
+mindful that people are watching"</string>
+    <string name="sweetb7">"Aliya, now 16 years old, considers herself old enough to be in a relationship with a guy. She
+broaches the issue with her dad.
+Her father gives her a step by step explanation about what having a boyfriend entails. He
+explains that what most young people have towards the opposite sex is not love but infatuation
+which is often short-lived.
+Also, matters of the heart is challenging even adults, thus young adults should thread softly when
+it comes to relationships because it may end up distracting them from their studies and also affect
+other areas of their lives. Aliya then reflects on the likeness she has for Bobo, how bad she feels
+when he leaves for Ireland and how horribly jealous she feels when she sees him with another
+girl.
+This makes her understand all her father is talking about considering how a wrong relationship
+can derail a person\'s life.
+Mr. Bello further counsels his child that it is best to wait for the right time before taking some
+steps in life. For most of the good things in life and luxuries, the price one is required to pay is
+the time one has to wait and in the end, it is always worth the wait. Aliya then tells her father
+about two students caught having sex in school who are caught by the school security.
+They are suspended indefinitely from school and Aliya explains how she feels embarrassed for
+the girl"</string>
+<string name="sweetb8">"Boko Haram, the terrorist sect has just bombed a local market and the Bello family watches this
+news on the TV. Everyone expresses displeasure for the evil act of these terrorists and condemns
+them.During this, Aliya asks her dad if it is true that all Muslims will go to hell, because Muslims do
+not believe in Jesus and they like to kill people.
+Mr. Bello calmly answers his daughter by explaining that it is wrong to judge or criticize other
+people\'s belief or faith because everyone is entitled to his or her faith. He also explains the
+beauty of the world because of the diversity in religion, people, religion, culture, tribe and
+colour. However, a set of ideas that people have about what someone or something is, especially
+an idea that is wrong, is known as stereotype.
+Stereotype is a constant act in our society, as Aliya, herself, is also stereotypical not long after, in
+this chapter. It is wrong to have misconceptions or discriminating towards people, especially in
+instances where people are generally condemned for the misdeeds of few people.
+Also, stereoscopic people are not usually bad persons but are victims of bad thinking and
+circumstances. Thus, they shouldn't be condemned because of their attitude but, rather corrected"</string>
+    <string name="sweetb9">"After listening to a story about a man who nursed his torturer back to health instead of leaving
+him to die, Aliya wonders how she can ever forgive those who have wronged her.
+She talks to her dad about how she has been feeling ugly and not have enough self-esteem
+concerning her shape and physique after one of her teachers and another student, Bunmi who
+continuously call her FAT and picks on her. This is known as body shaming, as they make
+negative comments about her weight or size.
+Her father condemns this act but explains to her how to develop enough self esteem such that
+people\'s words don't hurt her and nobody can hurt her without permission.He teaches her that what she feels about herself is more important than how other people make
+her feel and she should have confidence in how she looks.
+Moreover, beauty is neither fat nor slim but however one looks is beautiful, one just has to
+be confident about it.
+Beauty is also never enough but having a good character is best. Mr. Bello ends the conversation
+with a story which teaches that he has bestowed his intelligence and guidance to his daughter,
+and it is her responsibility to do the same for her children too"</string>
+
+
+
+
+
+
+
+
+<!--    <string name="action_settings">Settings</string>-->
+    <string name="stdCal">Standard Calculator</string>
+    <string name="sciCal">Scientific Calculator</string>
+    <string name="unitCal">Unit Converter</string>
+    <string name="clear">C</string>
+    <string name="backspace">⌫</string>
+    <string name="divide">÷</string>
+    <string name="sqrt">√</string>
+    <string name="cuberoot">\u221B</string>
+    <string name="square">x²</string>
+    <string name="cube">x\u00B3</string>
+    <string name="tenpow">10\u207F</string>
+    <string name="sininv">sin\u207B\u00B9</string>
+    <string name="cosinv">cos\u207B\u00B9</string>
+    <string name="taninv">tan\u207B\u00B9</string>
+    <string name="posneg">±</string>
+    <string name="xpown">xⁿ</string>
+    <string name="epown">eⁿ</string>
+    <string name="pi">π</string>
+    <string name="openBracket">(</string>
+    <string name="closeBracket">)</string>
+<!--    <string name="history">History</string>-->
+
+    <string-array name="area">
+        <item>Sq. Millimeter</item>
+        <item>Sq. Centimeter</item>
+        <item>Sq Meter</item>
+        <item>Sq. Kilometer</item>
+        <item>Acre</item>
+        <item>Hectare</item>
+    </string-array>
+
+    <string-array name="length">
+        <item>Nanometer</item>
+        <item>Millimeter</item>
+        <item>Centimeter</item>
+        <item>Meter</item>
+        <item>Kilometer</item>
+        <item>Inches</item>
+        <item>Foot</item>
+        <item>Yards</item>
+        <item>Mile</item>
+    </string-array>
+
+    <string-array name="temperature">
+        <item>Celsius</item>
+        <item>Farenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+
+    <string-array name="weight">
+        <item>Milligrams</item>
+        <item>Centigrams</item>
+        <item>Decigrams</item>
+        <item>Grams</item>
+        <item>Kilograms</item>
+        <item>Metric tonnes</item>
+        <item>Pounds</item>
+        <item>Ounces</item>
+    </string-array>
+
+    <string name="deleteHistory">Delete History</string>
+    <string name="mode1">Degree</string>
+    <string name="mode2">Radian</string>
+    <string name="toggle">SWITCH</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="naturalLog">ln</string>
+    <string name="hyperbolicSine">sinh</string>
+    <string name="hyperbolicCosine">cosh</string>
+    <string name="hyperbolicTan">tanh</string>
+    <string name="log">log</string>
+    <string name="Mod">%</string>
+    <string name="inverse">1/x</string>
+    <string name="factorial" >x!</string>>
 
 </resources>

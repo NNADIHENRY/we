@@ -77,7 +77,6 @@
                     </LinearLayout>
 
                     <Switch
-                        android:id="@+id/switch_ison"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
@@ -119,7 +118,6 @@
                     </RelativeLayout>
 
                     <TextView
-                        android:id="@+id/tv_days"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/days"

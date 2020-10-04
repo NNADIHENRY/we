@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "1015572460272",
+    "firebase_url": "https://hibet-5697e.firebaseio.com",
+    "project_id": "hibet-5697e",
+    "storage_bucket": "hibet-5697e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015572460272:android:b375a578b961f2716e8835",
+        "android_client_info": {
+          "package_name": "HITech.com.HIBet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015572460272-c7feojnevg0qje31vd6drsmqg0hif5fo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvqbe4_TM26VWXBm_eRg1Y-7Bmfs46N6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015572460272-c7feojnevg0qje31vd6drsmqg0hif5fo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015572460272:android:ae52ba620bbd6a9a6e8835",
+        "android_client_info": {
+          "package_name": "com.HITech.jambquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015572460272-ggegbfi8d44vdl9bhfnli8o6bcp747hc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.HITech.jambquiz",
+            "certificate_hash": "aea3f13cfce5d4c69ce273d5b34b7036ea0b69d5"
+          }
+        },
+        {
+          "client_id": "1015572460272-c7feojnevg0qje31vd6drsmqg0hif5fo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvqbe4_TM26VWXBm_eRg1Y-7Bmfs46N6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015572460272-c7feojnevg0qje31vd6drsmqg0hif5fo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

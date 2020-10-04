@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1003159029279",
+    "firebase_url": "https://hilearn-916ee.firebaseio.com",
+    "project_id": "hilearn-916ee",
+    "storage_bucket": "hilearn-916ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003159029279:android:7a364b9e04bb3a0d96372a",
+        "android_client_info": {
+          "package_name": "com.HITech.HILearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003159029279-3e2kcv07negdgl8kp2l9obvl40o5784m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSpV_H2YGrSO_YFUlZhkhotJ8e6eg2_QY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003159029279-3e2kcv07negdgl8kp2l9obvl40o5784m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
