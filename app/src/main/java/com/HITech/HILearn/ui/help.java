@@ -1,6 +1,9 @@
 package com.HITech.HILearn.ui;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.HITech.HILearn.R;
 import android.content.Intent;
 import android.net.Uri;
@@ -10,23 +13,45 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.HITech.HILearn.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 /**
  * Created by nnenna on 12/2/18.
  */
 
 public class help extends AppCompatActivity{
+    private AdView mAdView;
+    Toolbar toolbar;
 
     private ImageView call, facebook, whatsapp, instagram, twitter;
 
-    public help() {
-    }
+private void backIntent(){
+    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+    startActivity(intent);
+
+}
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help);
 
+        for (int i = 0; i<100;i++) {
+            mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+
+            mAdView.loadAd(adRequest);
+        }
+
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(v -> backIntent());
+        getSupportActionBar().setTitle(null);
         whatsapp = findViewById(R.id.whatsapp);
         twitter = findViewById(R.id.twitter);
         facebook = findViewById(R.id.facebook);

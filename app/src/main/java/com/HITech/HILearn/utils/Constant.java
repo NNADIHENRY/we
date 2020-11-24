@@ -24,7 +24,6 @@ import com.HITech.HILearn.model.ColorModel;
 import com.HITech.HILearn.model.HistoryModel;
 import com.HITech.HILearn.model.MainModel;
 import com.HITech.HILearn.model.StoreSetModel;
-import com.HITech.HILearn.ui.ActivityDailyTest;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -86,6 +85,7 @@ public class Constant {
     public static final int QUIZ_SIZE = 20;
     public static final int TEXT_LENGTH = 6;
     public static final int DELAY_SEOCND = 400;
+    public static final int DELAY_SEOCNDS = 1600;
 
 
     public static String getTextString(String s) {
@@ -118,19 +118,19 @@ public class Constant {
 //                return R.layout.activity_fraction;
 //            }
 //        } else
-        if (isDailyQuiz) {
-            if (width == 1440) {
-                return R.layout.activity_daily_quiz_1440;
-            } else {
-                return R.layout.activity_daily_quiz;
-            }
-        } else {
+//        if (isDailyQuiz) {
+//            if (width == 1440) {
+//                return R.layout.activity_daily_quiz_1440;
+//            } else {
+//                return R.layout.activity_daily_quiz;
+//            }
+//        } else {
             if (width == 1440) {
                 return R.layout.activity_1440_quiz;
             } else {
                 return R.layout.activity_quiz;
             }
-        }
+//        }
 
 
     }
@@ -741,11 +741,11 @@ public class Constant {
         Objects.requireNonNull(setDialog.getWindow()).setBackgroundDrawableResource(android.R.color.transparent);
 
 
-        btn_done.setOnClickListener(view1 -> {
-            Intent intent = new Intent(activity, ActivityDailyTest.class);
-            activity.startActivity(intent);
-            setDialog.dismiss();
-        });
+//        btn_done.setOnClickListener(view1 -> {
+//            Intent intent = new Intent(activity, ActivityDailyTest.class);
+//            activity.startActivity(intent);
+//            setDialog.dismiss();
+//        });
 
     }
 

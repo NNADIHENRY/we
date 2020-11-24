@@ -178,6 +178,7 @@
                             android:orientation="horizontal">
 
                             <ImageView
+                                android:id="@+id/coin"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
@@ -361,7 +362,21 @@
 
 
         </RelativeLayout>
+        <TextView
+            android:id="@+id/comprehension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="8dp"
 
+            android:background="@drawable/quiz_bg"
+            android:fontFamily="@font/myriadpro_semibold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/read_comprehension"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txt_size" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -373,13 +388,16 @@
             android:orientation="vertical">
 
 
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/dp_15"
                 android:gravity="center"
                 android:orientation="vertical">
+
 
                 <TextView
                     android:id="@+id/textView1"
@@ -399,16 +417,22 @@
                     android:layout_height="wrap_content"
                     android:text=" "
                     android:layout_marginTop="5dp"
-                    android:layout_marginBottom="@dimen/dp_10"
                     android:fontFamily="@font/myriadpro_semibold"
                     android:gravity="center"
                     android:padding="10dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/txt_size" />
+
             </LinearLayout>
-
-
+            </ScrollView>
+<ImageView
+    android:id="@+id/speak"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/speak"
+    android:layout_gravity="right"
+    android:layout_marginRight="30dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/quiz_size"

@@ -2,7 +2,16 @@
 
 
     <string name="app_name">Hi-Learn</string>
+    <string name="facebook_application_id">321957875689882</string>
+    <string name="fb_login_protocol_scheme">fb321957875689882</string>
+
     <string name="discussion">Discussion Room</string>
+    <string name="sweet_sixteen">SWEET SIXTEEN</string>
+    <string name="comprehension2016">Comprehension From JAMB 2016</string>
+    <string name="comprehension2017">Comprehension From JAMB 2017</string>
+    <string name="comprehension2018">Comprehension From JAMB 2018</string>
+    <string name="comprehension">Comprehension</string>
+    <string name="read_comprehension">Read Comprehension</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -35,7 +44,7 @@
     <string name="commerce">Commerce</string>
     <string name="history">History</string>
 
-<string name="jnovels">JAMB novels</string>
+    <string name="jnovels">JAMB novels</string>
     <string name="set">Set</string>
     <string name="str_question">Question</string>
     <string name="please_wait">Please wait..</string>
@@ -407,7 +416,7 @@ the time one has to wait and in the end, it is always worth the wait. Aliya then
 about two students caught having sex in school who are caught by the school security.
 They are suspended indefinitely from school and Aliya explains how she feels embarrassed for
 the girl"</string>
-<string name="sweetb8">"Boko Haram, the terrorist sect has just bombed a local market and the Bello family watches this
+    <string name="sweetb8">"Boko Haram, the terrorist sect has just bombed a local market and the Bello family watches this
 news on the TV. Everyone expresses displeasure for the evil act of these terrorists and condemns
 them.During this, Aliya asks her dad if it is true that all Muslims will go to hell, because Muslims do
 not believe in Jesus and they like to kill people.
@@ -437,13 +446,7 @@ with a story which teaches that he has bestowed his intelligence and guidance to
 and it is her responsibility to do the same for her children too"</string>
 
 
-
-
-
-
-
-
-<!--    <string name="action_settings">Settings</string>-->
+    <!--    <string name="action_settings">Settings</string>-->
     <string name="stdCal">Standard Calculator</string>
     <string name="sciCal">Scientific Calculator</string>
     <string name="unitCal">Unit Converter</string>
@@ -464,7 +467,7 @@ and it is her responsibility to do the same for her children too"</string>
     <string name="pi">π</string>
     <string name="openBracket">(</string>
     <string name="closeBracket">)</string>
-<!--    <string name="history">History</string>-->
+    <!--    <string name="history">History</string>-->
 
     <string-array name="area">
         <item>Sq. Millimeter</item>
@@ -518,6 +521,127 @@ and it is her responsibility to do the same for her children too"</string>
     <string name="log">log</string>
     <string name="Mod">%</string>
     <string name="inverse">1/x</string>
-    <string name="factorial" >x!</string>>
+    <string name="factorial">x!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="comprehension_2016">"The African moralist has always regarded
+smoking as an indication of moral degradation.
+A number of people have accepted the moralist
+idea on smoking while a good many people
+have remained indifferent to the moralist view
+and have continued to smoke. The same
+argument has been applied to the consumption
+of alcohol. The African moralist, basing his
+judgement on the behaviour of a few
+alcoholics, tend to regard the habit of taking
+alcohol as a sign of wretchedness. The moralist
+holds the view that anybody who forms the
+habit of consuming alcohol will never do well in
+life. While this may be true in respect of a few
+people in the society, the fear of the moralist
+has not been justified.
+However, the economist is primarily interested
+in the habit of smoking and the consumption of
+alcohol in so far as they give satisfaction to
+smokers and drinkers and so generate supply
+of and demand for tobacco and alcohol.
+Some moral principles associated with religion
+tend to lead on to economic problems.
+Followers of certain religions are expected not
+to consume pork, take alcohol or smoke
+tobacco. Devotees of some religious groups, on
+the other hand, can eat pork while others are
+expected to abstain from alcohol and smoking.
+Strict observance of these moral rules could
+cripple the breweries, the cigarette factories
+and some businesses; however, there seems to
+be a growing number of alcohol consumers and
+cigarette smokers-a development which should
+be of interest to the economist.
+Adapted from Peter Scott's article in Sunday Times."</string>
+    <string name="comprehension_2017">"Anthropologists tell us that for a society to
+remain stable, the roles of men and women
+must be properly differentiated and well
+defined. In primitive societies, the men were
+assigned the roles of going out to hunt, fish
+and fight off the hostile tribe next door while
+the women did the housekeeping and minded
+the children. The men were believed to be
+superior to the women in physical strength and
+capability. There was a controversy in these
+societies as to what the roles of the sexes
+should be. Consequently, primitive societies
+enjoyed great stability. However, with the ad-
+van cement of civilization, many of the special
+privileges traditionally enjoyed by men began
+to be eroded one after another. There is hardly
+any sphere of human Endeavour in which
+women have not gained a firm foothold: there
+are women doctors, engineers, pilots, prime
+ministers, judges, bankers and so on. Today,
+the women's spheres of operation are no longer
+restricted to the home; she is successfully
+competing with her counterpart in every area
+of human activity. But has this development
+been an unqualified blessing to the society?
+To answer this question, let us examine some
+of the problems created in the process of
+achieving women's emancipation. First, a large
+number of women including the married ones
+and mothers now take up paid employment.
+The conditions attached to such employment
+make it extremely difficult if not impossible for
+them to take adequate care of their children at
+homes. Since no one serve two masters, the
+health and education of the children suffer
+tremendously.
+Adapted from Ukwuegbe C., et al (2006)
+CATCH-Up English Language for SSCEMME,
+Ibadan: Heinemann Educational Books
+(Nigeria) PLC."</string>
+    <string name="comprehension_2018">Returning home after a decade and half
+abroad, our Geography master remained
+incurably addicted to foreign ways and ideas
+for years after landing here. He would forever
+stick to his theory of Africans suffering from a
+curse inflicted on them by the Almighty God for
+some heinous sins committed centuries ago. He
+would, in support of this theory, ask listeners:
+"Why would our mosquito inflict deadly malaria
+on us whereas the British mosquito does not
+bite? Why aren't there poisonous snakes in
+Britain whereas here most snakes are deadly?
+Why should the deadly sickle cell disease be
+peculiar to the black race?"
+Of course, he hardly waits for answers to
+these and similar questions before jumping to
+the same inevitable conclusion. However, he
+met his match one day when a new student
+joined the class and heard the litany we were
+used to. The new boy calmly said, "Sir, I
+happen to know a few white men who suffer
+from the sickle cell disease; some are Italians
+and some are Spanish. The mosquito is equally
+deadly in India, South-east Asian Countries and
+South America. The United States and some
+other South American 5 Countries have their
+deadly snakes. And, Sir, I know many white
+men, some of them British, who would prefer
+our brilliant sunshine to their horribly cold
+winter." And he sat down.
+I had never, before that day, seen our
+master so consumed with anger. He directed a
+burning look at the poor boy, who had no
+answer to this new battle. Without as much as
+saying a single word, the master stalked out of
+the classroom. Needless to say, our anger was
+turned on the new boy, who had decided to
+rock the boat without taking the time to sound
+the water. A delegation was sent to the master
+to apologise to him. He was appeased. But we
+all noticed something rather unusual thereafter
+never again did he dwell on the issue of
+Africans being the cursed People.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>>
 
 </resources>

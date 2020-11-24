@@ -9,12 +9,14 @@ import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +29,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import com.HITech.HILearn.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
@@ -45,9 +49,12 @@ public class DiscussionActivity extends AppCompatActivity {
     private ViewPager myviewPager;
     private TabLayout myTabLayout;
     private  TabsAccessorAdapter myTabsAccessorAdapter;
-
+    private AdView mAdView;
     private FirebaseUser currentUser;
     private FirebaseAuth mAuth;
+    ProgressDialog progressDialog;
+    Handler addHandler = new Handler();
+    ProgressBar progress_bar;
     private DatabaseReference rootRef;
     private Dialog dialog;
     CoordinatorLayout coordinatorLayout;
@@ -58,6 +65,21 @@ public class DiscussionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_discussion);
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
+
+        for (int i = 0; i<100;i++) {
+            mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+
+            mAdView.loadAd(adRequest);
+        }
+//        for(int i= 0; i<1; i++){
+            progressDialog = new ProgressDialog(this);
+            progressDialog.setCancelable(true);
+            progressDialog.setMessage(getString(R.string.please_wait));
+        progressDialog.dismiss();
+//            addHandler.postDelayed(addRunnable, 5);
+//        }
+//        progressDialog.dismiss();
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -73,10 +95,10 @@ public class DiscussionActivity extends AppCompatActivity {
         TextView name = findViewById(R.id.name);
         name.setText("HILEARN CHAT ROOM");
 //        getSupportActionBar().setTitle("HILEARN CHAT ROOM");
-        dialog = new ProgressDialog(DiscussionActivity.this);
-        dialog.setCancelable(false);
-        dialog.setTitle("Loading... please wait");
-        dialog.show();
+//        dialog = new ProgressDialog(DiscussionActivity.this);
+//        dialog.setCancelable(false);
+//        dialog.setTitle("Loading... please wait");
+//        dialog.show();
 
         coordinatorLayout = findViewById(R.id.coordinator);
 if (!isconnected()){
@@ -107,8 +129,14 @@ if (!isconnected()){
 //        dialog.dismiss();
 //    }
 }
-        dialog.dismiss();
 
+//if((myviewPager.toString().length()<=2)){
+//    progressDialog.show();
+//        }else{
+////    progressDialog.dismiss();
+//        }
+//        dialog.dismiss();
+//        progressDialog.dismiss();
     }
     public void onBackPressed() {
         backIntent();
@@ -137,6 +165,7 @@ if (!isconnected()){
         final String currentUserId = currentUser.getUid();
 //references the firebase database
         rootRef = FirebaseDatabase.getInstance().getReference();
+
 //this creates a child in the database Users and regs the users with there unique userId.
         rootRef.child("Users").child(currentUserId).addValueEventListener(new ValueEventListener() {
 
@@ -146,17 +175,19 @@ if (!isconnected()){
                 //then if it is created already it toasts welcome.
                 if((dataSnapshot.child("name").exists())){
                     Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
-                    dialog.dismiss();
+//                    dialog.dismiss();
+
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                dialog.dismiss();
+//                dialog.dismiss();
 
             }
+
         });
-        dialog.dismiss();
+//        dialog.dismiss();
     }
 
 

@@ -162,6 +162,7 @@ progressDialog.dismiss();
     }
 
     public void videoShow() {
+
         rewardedVideoAd.show();
 
         isVideoComplete = false;
@@ -558,7 +559,7 @@ progressDialog.dismiss();
 
 
     public void showVideo() {
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i <= 1; i++) {
             if (cd.isConnectingToInternet()) {
                 if (rewardedVideoAd != null && rewardedVideoAd.isLoaded()) {
                     videoShow();

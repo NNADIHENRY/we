@@ -23,4 +23,5 @@
 
     <include layout="@layout/content_history" />
 
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

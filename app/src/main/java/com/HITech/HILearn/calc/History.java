@@ -8,11 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.HITech.HILearn.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
 public class History extends AppCompatActivity {
 
+    private AdView mAdView;
     private ListView lv;
     private DBHelper dbHelper;
     private ArrayList<String> list;
@@ -26,6 +29,13 @@ public class History extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        for (int i = 0; i<100;i++) {
+            mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+
+            mAdView.loadAd(adRequest);
+        }
 
         lv=(ListView)findViewById(R.id.listView);
         dbHelper=new DBHelper(this);

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.HITech.HILearn">
+    package="com.HITech.HILearn" >
 
+    <uses-feature android:name="android.hardware.fingerprint"
+        android:required="false"/>
 
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission
+        android:name="android.permission.USE_FINGERPRINT" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -16,27 +24,29 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon_bg"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="com.HITech.HILearn.ui.Pay"
-            android:theme="@style/HalfScreenWindow"
-            >
-
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.Pay"
+            android:theme="@style/HalfScreenWindow" >
         </activity>
-        <activity android:name="com.HITech.HILearn.ui.Articles"></activity>
-        <activity android:name="com.HITech.HILearn.ui.AuthenticationActivity"
+        <activity
+            android:name=".ui.AuthenticationActivity"
             android:theme="@style/FullScreenWindow" >
-        </activity> <!-- <meta-data -->
-        <!-- android:name="com.facebook.sdk.ApplicationId" -->
-        <!-- android:value="@string/facebook_app_id" /> -->
-        <!-- <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/> -->
+        </activity>
+<!--         <meta-data-->
+<!--         android:name="com.facebook.sdk.ApplicationId"-->
+<!--         android:value="@string/facebook_app_id" />-->
+<!--         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>-->
         <meta-data
             android:name="co.paystack.android.PublicKey"
             android:value="pk_live_68085308987d360689c7a25fa874b6a5b1d20653" />
+
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/app_id" />
 
-        <receiver android:name="com.HITech.HILearn.receiver.AlarmReceiver">
+        <receiver android:name=".receiver.AlarmReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -46,7 +56,8 @@
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.HITech.HILearn.provider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true" >
+            <meta-data android:name="com.facebook.sdk.ApplicationId" android:resource="@string/facebook_application_id"/>
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
@@ -57,80 +68,83 @@
             android:value="true" />
 
         <activity
-            android:name="com.HITech.HILearn.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/FullScreenWindow" >
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+
+        </activity>
+
+
+        <activity
+            android:name=".ui.help"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".ui.SetActivity"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".ui.LevelActivity"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".ui.QuizActivity"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".ui.ScoreActivity"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".ui.ReviewAnswerActivity"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".calc.StandardCal"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".calc.History"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".calc.ScientificCal"
+            android:theme="@style/FullScreenWindow" >
+        </activity>
+        <activity
+            android:name=".calc.UnitWeight"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".calc.UnitLength"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".calc.UnitArea"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".calc.UnitTemperature"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".ui.ActivityRemider"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".ui.DiscussionActivity"
+            android:theme="@style/FullScreenWindow" />
+        <activity
+            android:name=".ui.GroupChatActivity"
+            android:theme="@style/FullScreenWindow" />
+
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
-
-
         </activity>
-        <activity
-            android:name="com.HITech.HILearn.ui.ActivityDailyTest"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.help"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.DailyQuizActivity"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.ChatActivity"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.SetActivity"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.LevelActivity"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.QuizActivity"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.ScoreActivity"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.ReviewAnswerActivity"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.calc.StandardCal"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.calc.History"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.calc.ScientificCal"
-            android:theme="@style/FullScreenWindow" >
 
-
-
-        </activity>
-        <activity
-            android:name="com.HITech.HILearn.calc.UnitWeight"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.calc.UnitLength"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.calc.UnitArea"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.calc.UnitTemperature"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.ActivityRemider"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.AllPdfActivity"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.DiscussionActivity"
-            android:theme="@style/FullScreenWindow" />
-        <activity
-            android:name="com.HITech.HILearn.ui.GroupChatActivity"
-            android:theme="@style/FullScreenWindow" />
     </application>
 
 </manifest>

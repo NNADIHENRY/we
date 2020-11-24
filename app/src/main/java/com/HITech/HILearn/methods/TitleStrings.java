@@ -27,6 +27,9 @@ public class TitleStrings {
 
         List<StoreSetModel> stringList = new ArrayList<>();
         stringList.add(new StoreSetModel(1, context.getString(R.string.english_1), context.getString(R.string.str_english)));
+        stringList.add(new StoreSetModel(1, context.getString(R.string.comprehension2018), context.getString(R.string.str_english)));
+        stringList.add(new StoreSetModel(1, context.getString(R.string.comprehension2017), context.getString(R.string.str_english)));
+        stringList.add(new StoreSetModel(1, context.getString(R.string.comprehension2016), context.getString(R.string.str_english)));
 //        stringList.add(new StoreSetModel(2, context.getString(R.string.english_2), context.getString(R.string.str_english)));
 //        stringList.add(new StoreSetModel(3, context.getString(R.string.english_3), context.getString(R.string.str_english)));
 //        stringList.add(new StoreSetModel(4, context.getString(R.string.english_4), context.getString(R.string.str_english)));

@@ -26,6 +26,7 @@ import com.HITech.HILearn.calc.UnitLength;
 import com.HITech.HILearn.calc.UnitTemperature;
 import com.HITech.HILearn.calc.UnitWeight;
 import com.bumptech.glide.Glide;
+import com.github.barteksc.pdfviewer.PDFView;
 import com.google.android.gms.ads.MobileAds;
 import com.HITech.HILearn.R;
 import com.HITech.HILearn.adapter.MainAdapter;
@@ -54,6 +55,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
@@ -61,6 +63,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
@@ -91,6 +94,11 @@ public class MainActivity extends AppCompatActivity
 public String textName, textEmail, phoneNum;
     FirebaseAuth mAuth;
 
+
+    ExpandableListAdapter listAdapter;
+    ExpandableListView expListView;
+    List<String> listDataHeader;
+    HashMap<String, List<String>> listDataChild;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -341,8 +349,9 @@ imcalc.setOnClickListener(new View.OnClickListener() {
              Intent intent = new Intent(MainActivity.this, DiscussionActivity.class);
              startActivity(intent);
         }else if (id == R.id.nav_novels) {
-             Intent intent = new Intent(MainActivity.this, Articles.class);
-             startActivity(intent);
+             shownovels();
+//             Intent intent = new Intent(MainActivity.this, Articles.class);
+//             startActivity(intent);
          }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -526,8 +535,6 @@ imcalc.setOnClickListener(new View.OnClickListener() {
         // Used to link or get views in the dialogBox
 
         builder.setCancelable(false)
-//                positive button is used to indicate whether to save or update
-
                 // Used to set Negative button to cancel
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
@@ -539,21 +546,6 @@ imcalc.setOnClickListener(new View.OnClickListener() {
 
         final AlertDialog alertDialog = builder.create();
         alertDialog.show();
-
-
-        alertDialog.getButton(alertDialog.BUTTON_POSITIVE).setOnClickListener
-                (new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // Show toast message when no text is entered
-
-
-
-                        // check if user updating note
-
-
-                    }
-                });
 
         Button button, button1, button2;
         button = alertDialog.findViewById(R.id.button);
@@ -652,5 +644,198 @@ imcalc.setOnClickListener(new View.OnClickListener() {
         });
 
     }
+    private void showArticle() {
+        // Override active layout
+        LayoutInflater layoutInflater = LayoutInflater.from(getApplicationContext());
+        View view = layoutInflater.inflate(R.layout.activity_articles    , null);
+        // AlertDialog used for pop-Ups
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setView(view);
 
+        // Used to link or get views in the dialogBox
+
+        builder.setCancelable(false)
+                // Used to set Negative button to cancel
+                .setTitle(R.string.sweet_sixteen)
+                .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialogBox, int id) {
+                        dialogBox.cancel();
+
+                    }
+                });
+
+        final AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+        expListView = (ExpandableListView) alertDialog.findViewById(R.id.lvExp);
+        prepareListData();
+        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+
+        // setting list adapter
+        expListView.setAdapter(listAdapter);
+        expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView expandableListView, View view, int i, long l) {
+                return false;
+            }
+        });
+        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+
+            @Override
+            public void onGroupExpand(int groupPosition) {
+
+            }
+        });
+        // Listview Group collasped listener
+        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+            @Override
+            public void onGroupCollapse(int groupPosition) {
+            }
+        });
+        // Listview on child click listener
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+                // TODO Auto-generated method stub
+//                Toast.makeText(
+//                        getApplicationContext(),
+//                        listDataHeader.get(groupPosition)
+//                                + " : "
+//                                + listDataChild.get(
+//                                listDataHeader.get(groupPosition)).get(
+//                                childPosition), Toast.LENGTH_SHORT)
+//                        .show();
+                return false;
+            }
+        });
+
+    }
+    public void prepareListData() {
+        listDataHeader = new ArrayList<String>();
+        listDataChild = new HashMap<String, List<String>>();
+
+        // Adding child data
+        listDataHeader.add(getString(R.string.sweeth1));
+        listDataHeader.add(getString(R.string.sweeth2));
+        listDataHeader.add(getString(R.string.sweeth3));
+        listDataHeader.add(getString(R.string.sweeth4));
+        listDataHeader.add(getString(R.string.sweeth5));
+        listDataHeader.add(getString(R.string.sweeth6));
+        listDataHeader.add(getString(R.string.sweeth7));
+        listDataHeader.add(getString(R.string.sweeth8));
+        listDataHeader.add(getString(R.string.sweeth9));
+
+        // Adding child data
+        List<String> introduction = new ArrayList<String>();
+        introduction.add(getString(R.string.sweetb1));
+        List<String> towhom = new ArrayList<String>();
+        towhom.add(getString(R.string.sweetb2));
+        List<String> components = new ArrayList<String>();
+        components.add(getString(R.string.sweetb3));
+        List<String> yourself = new ArrayList<String>();
+        yourself.add(getString(R.string.sweetb4));
+        List<String> Checks_For_Babies = new ArrayList<String>();
+        Checks_For_Babies.add(getString(R.string.sweetb5));
+
+        List<String> importance = new ArrayList<String>();
+        importance.add(getString(R.string.sweetb6));
+
+        List<String> exercise = new ArrayList<String>();
+        exercise.add(getString(R.string.sweetb7));
+
+        List<String> blood_spot = new ArrayList<String>();
+        blood_spot.add(getString(R.string.sweetb8));
+        List<String> ethiopia = new ArrayList<String>();
+        ethiopia.add(getString(R.string.sweetb9));
+
+
+        listDataChild.put(listDataHeader.get(0), introduction); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), towhom);
+        listDataChild.put(listDataHeader.get(2), components);
+        listDataChild.put(listDataHeader.get(3), yourself);
+        listDataChild.put(listDataHeader.get(4), Checks_For_Babies);
+        listDataChild.put(listDataHeader.get(5), importance);
+        listDataChild.put(listDataHeader.get(6), exercise);
+        listDataChild.put(listDataHeader.get(7), blood_spot);
+        listDataChild.put(listDataHeader.get(8), ethiopia);
+
+
+    }
+
+    public void showpdf(String name) {
+        // Override active layout
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        View view = layoutInflater.inflate(R.layout.activity_pdfview    , null);
+        // AlertDialog used for pop-Ups
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+        // Used to link or get views in the dialogBox
+
+        builder.setCancelable(false)
+                // Used to set Negative button to cancel
+                .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogBox, int id) {
+                        dialogBox.cancel();
+                    }
+                });
+        final AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+        PDFView pdfView = alertDialog.findViewById(R.id.pdfView);
+        pdfView.fromAsset(name).load();
+    }
+
+
+
+
+    public void shownovels() {
+        // Override active layout
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        View view = layoutInflater.inflate(R.layout.novels    , null);
+        // AlertDialog used for pop-Ups
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+        // Used to link or get views in the dialogBox
+
+        builder.setCancelable(false)
+                // Used to set Negative button to cancel
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogBox, int id) {
+                        dialogBox.cancel();
+                    }
+                });
+        final AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+        Button donne = alertDialog.findViewById(R.id.donne);
+        Button macbeth = alertDialog.findViewById(R.id.macbeth);
+        Button sweetsixteen = alertDialog.findViewById(R.id.sweetsixteen);
+        Button othello = alertDialog.findViewById(R.id.othello);
+
+        donne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showpdf("done.pdf");
+            }
+        });
+        othello.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showpdf("othello.pdf");
+            }
+        });
+
+        sweetsixteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showArticle();
+            }
+        });
+        macbeth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showpdf("macbeth.pdf");
+            }
+        });
+        }
 }

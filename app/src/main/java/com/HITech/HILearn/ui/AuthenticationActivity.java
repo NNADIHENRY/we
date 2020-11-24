@@ -1,28 +1,39 @@
 package com.HITech.HILearn.ui;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
+import android.Manifest;
+import android.app.KeyguardManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.hardware.fingerprint.FingerprintManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.security.keystore.KeyGenParameterSpec;
+import android.security.keystore.KeyPermanentlyInvalidatedException;
+import android.security.keystore.KeyProperties;
+import android.util.Base64;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
-
 import com.HITech.HILearn.R;
-import com.HITech.HILearn.calc.ScientificCal;
-import com.HITech.HILearn.calc.StandardCal;
 import com.HITech.HILearn.utils.Constant;
-
-
+import com.HITech.HILearn.utils.FingerprintHandler;
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.BuildConfig;
 import com.firebase.ui.auth.IdpResponse;
@@ -33,9 +44,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.ActionCodeSettings;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
@@ -43,8 +54,26 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import android.content.pm.Signature;
+import java.security.UnrecoverableKeyException;
+import java.security.cert.CertificateException;
 import java.util.Collections;
 import java.util.HashMap;
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKey;
 
 
 public class AuthenticationActivity extends AppCompatActivity {
@@ -71,14 +100,47 @@ public class AuthenticationActivity extends AppCompatActivity {
 
     private SharedPreferences pref;
 
+    CallbackManager mCallbackManager = CallbackManager.Factory.create();
 
+    // Declare a string variable for the key we’re going to use in our fingerprint authentication
+    private static final String KEY_NAME = "yourKey";
+    private Cipher cipher;
+    private KeyStore keyStore;
+    private KeyGenerator keyGenerator;
+    private TextView textView;
+    private FingerprintManager.CryptoObject cryptoObject;
+    private FingerprintManager fingerprintManager;
+    private KeyguardManager keyguardManager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Constant.setDefaultLanguage(this);
+//        FacebookSdk.sdkInitialize(getApplicationContext());
+
         setContentView(R.layout.activity_authentication);
+
+
+
+
+
+//        try {
+//            PackageInfo info = getPackageManager().getPackageInfo(
+//                    "com.HITech.HILearn",
+//                    PackageManager.GET_SIGNATURES);
+//            for (Signature signature : info.signatures) {
+//                MessageDigest md = MessageDigest.getInstance("SHA");
+//                md.update(signature.toByteArray());
+//                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+//            }
+//        }
+//        catch (PackageManager.NameNotFoundException e) {
+//        }
+//        catch (NoSuchAlgorithmException e) {
+//        }
+
+
         database = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
         rootRef = database;
@@ -119,6 +181,184 @@ public class AuthenticationActivity extends AppCompatActivity {
 //        });
 
 
+
+
+        mCallbackManager = CallbackManager.Factory.create();
+
+        LoginButton loginButton = findViewById(R.id.login_button);
+
+        //Setting the permission that we need to read
+        loginButton.setReadPermissions("email", "public_profile", "user_friends");
+
+        //Registering callback!
+        loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                //Sign in completed
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
+                Log.i(TAG, "onSuccess: logged in successfully");
+
+                //handling the token for Firebase Auth
+                handleFacebookAccessToken(loginResult.getAccessToken());
+
+                //Getting the user information
+                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+                    @Override
+                    public void onCompleted(JSONObject object, GraphResponse response) {
+                        // Application code
+                        Log.i(TAG, "onCompleted: response: " + response.toString());
+                        try {
+                            String email = object.getString("email");
+                            //String birthday = object.getString("birthday");
+
+                            Log.i(TAG, "onCompleted: Email: " + email);
+                           // Log.i(TAG, "onCompleted: Birthday: " + birthday);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Log.i(TAG, "onCompleted: JSON exception");
+                        }
+                    }
+                });
+
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "id,name,email");
+                request.setParameters(parameters);
+                request.executeAsync();
+
+
+
+
+            }
+
+            @Override
+            public void onCancel() {
+                Log.d(TAG, "facebook:onCancel");
+                Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Log.d(TAG, "facebook:onError", error);
+                Toast.makeText(getApplicationContext(), "an error occurred"+error, Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+    private void handleFacebookAccessToken(AccessToken token) {
+        Log.d(TAG, "handleFacebookAccessToken:" + token);
+
+        AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithCredential:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            Log.i(TAG, "onComplete: login completed with user: " + user.getDisplayName());
+
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithCredential:failure", task.getException());
+                            Toast.makeText(AuthenticationActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+
+                        // ...
+                    }
+                });
+    }
+
+
+
+
+
+
+
+
+//Create the generateKey method that we’ll use to gain access to the Android keystore and generate the encryption key//
+
+    private void generateKey() throws FingerprintException {
+        try {
+            // Obtain a reference to the Keystore using the standard Android keystore container identifier (“AndroidKeystore”)//
+            keyStore = KeyStore.getInstance("AndroidKeyStore");
+
+            //Generate the key//
+            keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
+
+            //Initialize an empty KeyStore//
+            keyStore.load(null);
+
+            //Initialize the KeyGenerator//
+            keyGenerator.init(new
+
+                    //Specify the operation(s) this key can be used for//
+                    KeyGenParameterSpec.Builder(KEY_NAME,
+                    KeyProperties.PURPOSE_ENCRYPT |
+                            KeyProperties.PURPOSE_DECRYPT)
+                    .setBlockModes(KeyProperties.BLOCK_MODE_CBC)
+
+                    //Configure this key so that the user has to confirm their identity with a fingerprint each time they want to use it//
+                    .setUserAuthenticationRequired(true)
+                    .setEncryptionPaddings(
+                            KeyProperties.ENCRYPTION_PADDING_PKCS7)
+                    .build());
+
+            //Generate the key//
+            keyGenerator.generateKey();
+
+        } catch (KeyStoreException
+                | NoSuchAlgorithmException
+                | NoSuchProviderException
+                | InvalidAlgorithmParameterException
+                | CertificateException
+                | IOException exc) {
+            exc.printStackTrace();
+            throw new FingerprintException(exc);
+        }
+    }
+
+    //Create a new method that we’ll use to initialize our cipher//
+    public boolean initCipher() {
+        try {
+            //Obtain a cipher instance and configure it with the properties required for fingerprint authentication//
+            cipher = Cipher.getInstance(
+                    KeyProperties.KEY_ALGORITHM_AES + "/"
+                            + KeyProperties.BLOCK_MODE_CBC + "/"
+                            + KeyProperties.ENCRYPTION_PADDING_PKCS7);
+        } catch (NoSuchAlgorithmException |
+                NoSuchPaddingException e) {
+            throw new RuntimeException("Failed to get Cipher", e);
+        }
+
+        try {
+            keyStore.load(null);
+            SecretKey key = (SecretKey) keyStore.getKey(KEY_NAME,
+                    null);
+            cipher.init(Cipher.ENCRYPT_MODE, key);
+            //Return true if the cipher has been initialized successfully//
+            return true;
+        } catch (KeyPermanentlyInvalidatedException e) {
+
+            //Return false if cipher initialization failed//
+            return false;
+        } catch (KeyStoreException | CertificateException
+                | UnrecoverableKeyException | IOException
+                | NoSuchAlgorithmException | InvalidKeyException e) {
+            throw new RuntimeException("Failed to init Cipher", e);
+        }
+    }
+
+    private class FingerprintException extends Exception {
+        public FingerprintException(Exception e) {
+            super(e);
+        }
+
     }
     @Override
     protected void onStart() {
@@ -131,12 +371,17 @@ public class AuthenticationActivity extends AppCompatActivity {
             finish();
             startActivity(new Intent(this, MainActivity.class));
         }
+
+
     }
 
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
+
 
         if (requestCode == RC_SIGN_IN1) {
             IdpResponse idpResponse = IdpResponse.fromResultIntent(data);
@@ -221,7 +466,7 @@ public class AuthenticationActivity extends AppCompatActivity {
 
 
 
-                            Toast.makeText(AuthenticationActivity.this, "User Signed In", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AuthenticationActivity.this, "Welcome " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
 
@@ -406,4 +651,7 @@ public class AuthenticationActivity extends AppCompatActivity {
 //                    }
 //                });
 //    }
+
+
+
 }

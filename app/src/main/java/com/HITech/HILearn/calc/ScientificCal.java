@@ -9,9 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.HITech.HILearn.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class ScientificCal extends AppCompatActivity {
 
+    private AdView mAdView;
     private EditText e1,e2;
     private int count=0;
     private String expression="";
@@ -28,7 +31,12 @@ public class ScientificCal extends AppCompatActivity {
         setContentView(R.layout.activity_scientific_cal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        for (int i = 0; i<100;i++) {
+            mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
 
+            mAdView.loadAd(adRequest);
+        }
         e1 = (EditText) findViewById(R.id.editText);
         e2 = (EditText) findViewById(R.id.editText2);
         mode = (Button) findViewById(R.id.mode);

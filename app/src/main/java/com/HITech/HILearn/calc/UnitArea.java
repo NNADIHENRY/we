@@ -9,9 +9,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.HITech.HILearn.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class UnitArea extends AppCompatActivity {
 
+    private AdView mAdView;
     private EditText e1,e2;
     private Spinner s1,s2;
     private int count1=0;
@@ -22,7 +25,12 @@ public class UnitArea extends AppCompatActivity {
         setContentView(R.layout.activity_unit_area);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        for (int i = 0; i<100;i++) {
+            mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
 
+            mAdView.loadAd(adRequest);
+        }
         e1=(EditText)findViewById(R.id.item1);
         e2=(EditText)findViewById(R.id.item2);
         s1=(Spinner)findViewById(R.id.spinner1);

@@ -1,5 +1,6 @@
 package com.HITech.HILearn.ui;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -11,12 +12,18 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.speech.tts.TextToSpeech;
+import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -47,15 +54,23 @@ import com.google.android.gms.ads.AdView;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 import static com.HITech.HILearn.utils.Constant.DELAY_SEOCND;
+import static com.HITech.HILearn.utils.Constant.DELAY_SEOCNDS;
 import static com.HITech.HILearn.utils.Constant.getLayout;
 import static com.HITech.HILearn.utils.Constant.getPlusScore;
 import static com.HITech.HILearn.utils.Constant.getTextString;
 
-public class QuizActivity extends BaseActivity implements View.OnClickListener {
+public class QuizActivity extends BaseActivity implements View.OnClickListener, TextToSpeech.OnInitListener {
 
-    TextView tv_set, tv_score, tv_plus_score, tv_right_count, tv_wrong_count, tv_timer, tv_coin, tv_question_count, tv_total_count, textView1, textView2, btn_op_1, btn_op_2, btn_op_3, btn_op_4;
+    ImageView coin2;
+    TextToSpeech textToSpeech;
+
+    Animation animFadeIn,animFadeOut,animBlink,animZoomIn,animZoomOut,animRotate
+            ,animMove,animSlideUp,animSlideDown,animBounce,animSequential,animTogether,animCrossFadeIn,animCrossFadeOut;
+
+    TextView tv_set, tv_score, tv_plus_score, tv_right_count, tv_wrong_count, tv_timer, tv_coin, tv_question_count, tv_total_count, textView1, textView2, btn_op_1, btn_op_2, btn_op_3, btn_op_4, comprehension;
     List<QuizModel> quizModelList = new ArrayList<>();
     ProgressDialog progressDialog;
     boolean isCount = false, isDivision, isClick = false, isRemider, isTimer;
@@ -71,10 +86,12 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener {
     ProgressBar progress_bar;
     RelativeLayout layout_cell;
     Toolbar toolbar;
-    MainActivity mainActivity = new MainActivity();
 
+    private ImageView speaker;
     CountDownTimer countDownTimer;
     MediaPlayer answerPlayer;
+
+    private String text;
 
     public void speak(int sound) {
         if (Constant.getSound(getApplicationContext())) {
@@ -94,6 +111,24 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayout(this, false, false));
+        textToSpeech = new TextToSpeech(this, this);
+        speaker = findViewById(R.id.speak);
+
+        speaker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text = textView1.getText().toString() + textView2.getText().toString();
+                texttoSpeak(text);
+
+            }
+        });
+
+        animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.rotate);
+        coin2 = findViewById(R.id.coin);
+
+
+
         for (int i = 0; i<100;i++) {
             mAdView = findViewById(R.id.adView);
             AdRequest adRequest = new AdRequest.Builder().build();
@@ -141,10 +176,97 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener {
 
     public void addCoins() {
         Constant.setCoins(getApplicationContext(), (coin + 1));
+        coin2.startAnimation(animFadeIn);
+        speak(R.raw.coin);
+        handler.postDelayed(r, DELAY_SEOCND);
     }
 
+    @SuppressLint("ResourceType")
+    public void showComprehension() {
+        // Override active layout
+        TextView  textView;
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        View view = layoutInflater.inflate(R.layout.fragment_comprehension    , null);
+        // AlertDialog used for pop-Ups
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+
+        // Used to link or get views in the dialogBox
+
+        builder.setCancelable(false)
+//                positive button is used to indicate whether to save or update
+                .setTitle(R.string.comprehension)
+
+//                .setIcon(R.drawable.speak, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                    }
+//                })
+//                .setPositiveButton(R.drawable.speak, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+////                        texttoSpeak(textView);
+//
+//
+//                    }
+//                })
+
+                // Used to set Negative button to cancel
+                .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialogBox, int id) {
+                        dialogBox.cancel();
+
+
+                    }
+                });
+
+        final AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+       textView= alertDialog.findViewById(R.id.comprehension);
+        if (tableName.equals(getString(R.string.english_set))){
+
+
+        if (id == 2){
+            textView.setText(R.string.comprehension_2018);
+
+        }else if (id == 3){
+            textView.setText(R.string.comprehension_2017);
+
+        }else if (id == 4){
+            textView.setText(R.string.comprehension_2016);
+
+        }
+        ImageView speak = alertDialog.findViewById(R.id.speak);
+        speak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                texttoSpeak(textView.getText().toString());
+            }
+        });
+
+        }
+
+
+
+
+    }
 
     private void init() {
+
+        comprehension = findViewById(R.id.comprehension);
+        comprehension.setMovementMethod(new ScrollingMovementMethod());
+//        comprehension.setVisibility(View.GONE);
+        comprehension.setVisibility(View.VISIBLE);
+        comprehension.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showComprehension();
+
+            }
+        });
+
 
         themePosition = getIntent().getIntExtra(Constant.THEMEPOSITION, 0);
         id = getIntent().getIntExtra(Constant.ID, 0);
@@ -265,6 +387,12 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener {
         setHelpLineView();
         setTheme();
         new GetAllData().execute();
+
+
+
+        if (id==1){
+            comprehension.setVisibility(View.GONE);
+        }
     }
 
     public void setTheme() {
@@ -431,7 +559,7 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener {
                 passIntent();
             }
         }
-        speak(R.raw.wrong);
+        speak(R.raw.wrong1);
         handler.postDelayed(r, DELAY_SEOCND);
     }
 
@@ -445,10 +573,10 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener {
             tv_right_count.setText(String.valueOf(right_answer_count));
             setScore();
         }
-        speak(R.raw.right);
+        speak(R.raw.coin);
 
         textView.setBackgroundResource(R.drawable.right_bg);
-        handler.postDelayed(r, DELAY_SEOCND);
+        handler.postDelayed(r, DELAY_SEOCNDS);
     }
 
     final Runnable r = this::setNextData;
@@ -499,7 +627,39 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener {
             btn_op_1.setBackgroundResource(R.drawable.wrong_bg);
         }
     }
+    public void texttoSpeak(String text) {
 
+        if ("".equals(text)) {
+            text = "Please enter some text to speak.";
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
+        }
+        else {
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        }
+    }
+    @Override
+    public void onDestroy() {
+        if (textToSpeech != null) {
+            textToSpeech.stop();
+            textToSpeech.shutdown();
+        }
+        super.onDestroy();
+    }
+    @Override
+    public void onInit(int i) {
+        if (i == TextToSpeech.SUCCESS) {
+            int result = textToSpeech.setLanguage(Locale.US);
+            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("error", "This Language is not supported");
+            } else {
+                texttoSpeak(text);
+            }
+        } else {
+            Log.e("error", "Failed to Initialize");
+        }
+    }
 
     public class GetAllData extends AsyncTask<Void, Void, String> {
 
@@ -528,15 +688,15 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener {
                 optionList.add(quizModel.answer);
                 Collections.shuffle(optionList);
                 quizModelList.get(i).setOptionList(optionList);
-                if (isDivision) {
-                    if (isRemider) {
-                        if (main_id == 1) {
-                            quizModelList.get(i).setRem(String.valueOf((Integer.parseInt(quizModel.firstDigit) % Integer.parseInt(quizModel.secondDigit))));
-                        } else {
-                            quizModelList.get(i).setRem(String.valueOf(getFormatValue2((Double.parseDouble(quizModel.firstDigit) % Double.parseDouble(quizModel.secondDigit)))));
-                        }
-                    }
-                }
+//                if (isDivision) {
+//                    if (isRemider) {
+//                        if (main_id == 1) {
+//                            quizModelList.get(i).setRem(String.valueOf((Integer.parseInt(quizModel.firstDigit) % Integer.parseInt(quizModel.secondDigit))));
+//                        } else {
+//                            quizModelList.get(i).setRem(String.valueOf(getFormatValue2((Double.parseDouble(quizModel.firstDigit) % Double.parseDouble(quizModel.secondDigit)))));
+//                        }
+//                    }
+//                }
             }
             return null;
         }
@@ -607,16 +767,16 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener {
                         optionViewList.get(i).setText(getTextString(optionList.get(i) + " " + getString(R.string.rem) + " " + getFormatValue2((Double.parseDouble(optionList.get(i)) % Double.parseDouble(quizModel.secondDigit)))));
                     }
                 } else {
-                    if (!optionList.get(i).contains(getString(R.string.str_dot))) {
-                        if (String.valueOf(optionList.get(i)).equals(quizModel.answer)) {
-                            quizModelList.get(position).setAnswer(optionList.get(i) + getString(R.string.str_dot) + 0);
-                        }
-                        optionViewList.get(i).setText(getTextString(optionList.get(i) + getString(R.string.str_dot) + 0));
-                        optionList.set(i, optionList.get(i) + getString(R.string.str_dot) + 0);
-                        quizModel = quizModelList.get(position);
-                    } else {
+//                    if (!optionList.get(i).contains(getString(R.string.str_dot))) {
+//                        if (String.valueOf(optionList.get(i)).equals(quizModel.answer)) {
+//                            quizModelList.get(position).setAnswer(optionList.get(i) + getString(R.string.str_dot) + 0);
+//                        }
+//                        optionViewList.get(i).setText(getTextString(optionList.get(i) + getString(R.string.str_dot) + 0));
+//                        optionList.set(i, optionList.get(i) + getString(R.string.str_dot) + 0);
+//                        quizModel = quizModelList.get(position);
+//                    } else {
                         optionViewList.get(i).setText(optionList.get(i));
-                    }
+//                    }
                 }
             }
         }
